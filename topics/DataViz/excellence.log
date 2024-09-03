@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.6)  2 SEP 2024 21:22
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.6.6)  3 SEP 2024 10:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1496,70 +1496,39 @@ File: excellence_figs/fig_23.png Graphic file (type bmp)
 File: excellence_figs/fig_24.png Graphic file (type bmp)
 <excellence_figs/fig_24.png>
 
-Overfull \vbox (56.73547pt too high) detected at line 443
+Overfull \vbox (7.46156pt too high) detected at line 435
  []
 
 [24
 
 ]
+File: excellence_figs/fig_24.png Graphic file (type bmp)
+<excellence_figs/fig_24.png>
+
+Overfull \vbox (19.5175pt too high) detected at line 451
+ []
+
+[25
+
+]
 File: excellence_figs/fig_25.png Graphic file (type bmp)
 <excellence_figs/fig_25.png>
-[25
+[26
 
 ]
 File: excellence_figs/fig_26.png Graphic file (type bmp)
 <excellence_figs/fig_26.png>
-[26
+[27
 
 ]
 File: excellence_figs/fig_27.png Graphic file (type bmp)
 <excellence_figs/fig_27.png>
-[27
-
-]
-LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <9> not available
-(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 518.
 [28
-
-] [29
-
-]
-File: excellence_figs/fig_28.png Graphic file (type bmp)
-<excellence_figs/fig_28.png>
-[30
-
-]
-File: excellence_figs/fig_29.png Graphic file (type bmp)
-<excellence_figs/fig_29.png>
-[31
-
-]
-File: excellence_figs/fig_31.png Graphic file (type bmp)
-<excellence_figs/fig_31.png>
-File: excellence_figs/fig_30.png Graphic file (type bmp)
-<excellence_figs/fig_30.png>
-[32
-
-]
-File: excellence_figs/fig_33.png Graphic file (type bmp)
-<excellence_figs/fig_33.png>
-File: excellence_figs/fig_32.png Graphic file (type bmp)
-<excellence_figs/fig_32.png>
-
-Overfull \vbox (81.32277pt too high) detected at line 628
- []
-
-[33
-
-]
-File: excellence_figs/fig_34.png Graphic file (type bmp)
-<excellence_figs/fig_34.png>
-[34
 
 ]
 File: excellence_figs/fig_35.png Graphic file (type bmp)
 <excellence_figs/fig_35.png>
-[35
+[29
 
 ]
 \tf@nav=\write5
@@ -1573,12 +1542,12 @@ File: excellence_figs/fig_35.png Graphic file (type bmp)
 
 (./excellence.aux) ) 
 Here is how much of TeX's memory you used:
- 33347 strings out of 476179
- 703881 string characters out of 5809545
- 1113728 words of memory out of 5000000
- 53421 multiletter control sequences out of 15000+600000
- 475744 words of font info for 84 fonts, out of 8000000 for 9000
+ 33247 strings out of 476179
+ 701234 string characters out of 5809545
+ 1111392 words of memory out of 5000000
+ 53330 multiletter control sequences out of 15000+600000
+ 475736 words of font info for 83 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  128i,13n,122p,1811b,580s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on excellence.pdf (35 pages).
+Output written on excellence.pdf (29 pages).
