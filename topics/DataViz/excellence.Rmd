@@ -1,1184 +1,507 @@
 ---
 title: "Graphical Excellence"
 author: "\\((\\text{Professor Dave})^2\\)"
-output: 
+output:
   beamer_presentation:
-    theme: "metropolis"  # Modern and simple theme
-    fonttheme: "professionalfonts" # Modern font
+    theme: "metropolis"
+    colortheme: "seahorse"
+    latex_engine: "xelatex"
+    keep_tex: true
+header-includes:
+  - \usepackage{xcolor}
+  - \definecolor{myorange}{RGB}{255, 94, 77} 
 ---
 
-# Slide 1
+# Outline
 
-# Slide 2
+*The Visual Display of Quantitative Information* provides a rich story of graph types and excellence including:
 
-Most of the material comes from Chapter  1 of The Visual Display of Quantitative Information by Edward R. Tufte, 2nd Edition, Graphics Press, 2007.   
-Graphical Excellence
+-   What is excellence?
 
-Data Maps
+-   Data maps
 
-Time Series
+-   Time series
 
-Space-Time Narrative Designs
+-   Space-time narrative designs
 
-Relational Graphics
+-   Relational graphics
 
+-   Some history
+
+# How is excellence achieved?
+
+When complex ideas are expressed with:
+
+-   Clarity
+
+-   Precision
+
+-   Efficiency
+
+\vspace{4mm}
+\pause
+How do we get there?
+
+- \textcolor{orange}{Do}: Show the data clearly, aim to have a quick understanding of the data trend, facilitate comparisons.
+
+- \textcolor{orange}{Don't}: Distort the data, compress data in small spaces, show data at different scales.
+
+
+# Why visualize? \textcolor{orange}{Anscombe's Quartet}
+
+![](excellence_figs/fig_1.png)
+
+# Why visualize? \textcolor{orange}{Anscombe's Quartet}
+
+
+![](excellence_figs/fig_2.png){width=80%}
+
+
+
+
+
+Simple statistics fail to exhibit the data trend!  Remember to always visualize!
+
+# Why visualize? \textcolor{orange}{Anomaly detection}
+
+![](excellence_figs/fig_3.png){width=80%}
+
+Showing the data clearly reveals anomalies.
+
+# Data maps
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_5.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.6\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_4.png}
+\end{minipage}
+
+Each map conveys a large amount of information in a small space.
+
+They invite us to search for patterns and to explain their nature.
+
+# Data maps
+
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_7.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.6\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_6.png}
+\end{minipage}
+
+High death rates in the Northeast region and Great Lakes.
+
+Low death rates across central and south bands.
+
+# Data maps
+
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_9.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.6\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_10.png}
+\end{minipage}
+
+We are now looking at \textcolor{orange}{white males} ...
+
+Observations?
+
+Explanations?
+
+# Data maps
+
+![](excellence_figs/fig_10.png)
+
+High death rates in the Louisiana area. \textcolor{orange}{Asbestos exposure}
+
+# Data maps
+
+\textcolor{orange}{Shortcomings}:
+
+- The population of each county is not considered (only area).
+
+- Changes across counties are abrupt (not smooth).
+
+- How reliable is the data? (the diagnosis may be biased).
+
+# Modern data maps
+
+
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_12.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\begin{itemize} \footnotesize
+\item Computerized cartography of the universe
+\item Distribution of 1.3 million galaxies in the Northern Galactic hemisphere.
+\item The darker the gray tone, the more galaxies in that region.
+\end{itemize}
+\end{minipage}
+
+
+
+# Time series
+
+![](excellence_figs/fig_13.png)
+
+- This is the most frequent type of graph design.
+
+- The x-axis contains time in one of many possible units (seconds, minutes, hours, days, months, years, etc.).
+
+
+
+
+# Time series
+
+![](excellence_figs/fig_14.png)
+
+- Radio emissions from Jupiter captured by Voyager 2 (1979)
+
+- x-axis is both time and distance from Jupiter
+
+- Top three panels are different radio bands
+
+- Bottom panel is orientation of spacecraft
+
+# Time series
+
+\textcolor{orange}{New York City} weather summary (1980)
+
+![](excellence_figs/fig_15.png){width=95%}
+
+How much can you learn from the graph?
+
+The graph tells a story!
+
+# Time series
+
+Graphical train schedule for Paris to Lyon (1880s).
+
+![](excellence_figs/fig_16.png){width=90%}
+\textcolor{orange}{y-axis}: Arrivals/departures, top: Paris, bottom: Lyon.
+
+\textcolor{orange}{x-axis}: time!  Slope of line corresponds to the speed of the train.
+
+# Time series
+
+\centering
+\includegraphics[width=0.4\textwidth]{excellence_figs/fig_17.png}
+
+<!-- ![](excellence_figs/fig_17.png){width=40%} -->
+Extremely fast train came in 1981.
+
+# Time series
+
+\centering
+\begin{minipage}{0.55\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_19.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.55\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_18.png}
+\end{minipage}
+
+
+Time series can focus on the graphical evolution of body parts.
+
+# Time series
+
+\begin{center}
+\includegraphics[width=0.55\textwidth]{excellence_figs/fig_20.png}
+\end{center}
+
+\footnotesize
+Causal information is encoded here ... how?
+
+Outgoing mail (millions) by incumbent representatives.
+
+Representatives use the privilege of free mail to send many letters
+during re-election campaigns.
+
+
+# Space-time narrative designs
+
+\begin{minipage}{1\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_21.png}
+\end{minipage}
+\hfill
+\begin{minipage}{1\textwidth}
+\footnotesize
+\vspace{3mm}
+\begin{itemize}
+  \item Time-series graphs can be enhanced by adding spatial dimensions.
+  \item This adds multivariate complexity that should be easy to visualize and interpret.
+  \item Example: Life-cycle of the Japanese beetle.
+\end{itemize}
+\end{minipage}
+
+# Space-time narrative designs
+
+\begin{minipage}{1\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_22.png}
+\end{minipage}
+\hfill
+\begin{minipage}{1\textwidth}
+\footnotesize
+\vspace{3mm}
+\begin{itemize}
+  \item An all-time favorite graph shows the fate of Napoleon's army in Russia (1812-1813).
+  \item See the reference book for an explanation.
+\end{itemize}
+\end{minipage}
+
+# Space-time narrative designs
+
+\begin{minipage}{1\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_23.png}
+\end{minipage}
+\hfill
+\begin{minipage}{1\textwidth}
+\footnotesize
+\vspace{3mm}
+One more example is the levels of air pollutants in southern California during the day.
+\end{minipage}
+
+# Slide 27
+
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_24.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\footnotesize
+\begin{itemize}
+  \item Relational Graphics
+  \item It is similar to previous graphs, but the dimensions can differ from spatial coordinates.
+  \item The word "relational" refers to the dependence of two variables (any variables).
+  \item Example: Each circle refers to a country.
+  \item The size of the circle correlates with the area of the country.
+  \begin{itemize}
+    \item The line on the left is the population in millions.
+    \item The line on the right is the taxes collected in millions of pounds.
+  \end{itemize}
+  \item What is important is the sign of the slope for every connecting line.
+\end{itemize}
+\end{minipage}
+
+# Slide 28
+
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_25.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\footnotesize
+\begin{itemize}
+  \item Relational Graphics
+  \item Relational graphs are the greatest of graphical designs.
+  \item They help look for causal information.
+  \item Example: The relationship of lung cancer and smoking.
+\end{itemize}
+\end{minipage}
+
+# Slide 29
+
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_26.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\footnotesize
+\begin{itemize}
+  \item Relational Graphics
+  \item Relational graphs are the greatest of graphical designs.
+  \item They help look for causal information.
+  \item Is there a connection between inflation and unemployment?
+  \item Apparently NOT!
+\end{itemize}
+\end{minipage}
+
+# Slide 30
+
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_27.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\footnotesize
+\begin{itemize}
+  \item Relational Graphics
+  \item Graphs can be very informative.
+  \item Data points can convey a lot of information.
+  \item Rage (x-axis) vs Fear (y-axis).
+\end{itemize}
+\end{minipage}
+
+# Slide 31
+
+\footnotesize
+Most of the material comes from Chapter 1 of *The Visual Display of Quantitative Information* by Edward R. Tufte, 2nd Edition, Graphics Press, 2007.
+
+\begin{itemize}
+  \item Graphical Excellence
+  \item Data Maps
+  \item Time Series
+  \item Space-Time Narrative Designs
+  \item Relational Graphics
+  \item History
+  \item Visual Displays
+  \item Graphical Excellence
+\end{itemize}
+
+# Slide 32
+
+\footnotesize
 History
 
-Visual Displays  Graphical Excellence
-
-# Slide 3
-
-Graphical Excellence
-Excellence is achieved when complex ideas are expressed with
-
-
-Clarity
-
-
-
-Precision
-
-
-
-Efficiency
-
-
-
-
-
-
-
-
-
-
-
-
-
-Show the data clearly.
-
-Aim to have a quick understanding of the data trend.
-
-Do not distort the data.
-
-Facilitate comparisons.
-
-Compress data in small spaces.
-
-Show data at different scales.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Slide 4
-
-![Slide 4 Image](excellence_figs/fig_1.png)
-
-Graphical Excellence
-Show data clearly.
-Consider Anscombes Quartet:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 5 -->
-
-<!-- ![Slide 5 Image](excellence_figs/fig_2.png) -->
-
-<!-- Graphical Excellence -->
-<!-- Simple statistics fail to exhibit the data trend: -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 6 -->
-
-<!-- ![Slide 6 Image](excellence_figs/fig_3.png) -->
-
-<!-- Graphical Excellence -->
-<!-- Showing the data clearly reveals anomalies.  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 7 -->
-
-<!-- Most of the material comes from Chapter  1 of  The Visual Display of Quantitative Information by Edward R. Tufte, 2nd Edition, Graphics Press, 2007.    -->
-<!-- Graphical Excellence -->
-
-<!-- Data Maps -->
-
-<!-- Time Series -->
-
-<!-- Space-Time Narrative Designs -->
-
-<!-- Relational Graphics -->
-
-<!-- Visual Displays  Graphical Excellence   -->
-
-<!-- # Slide 8 -->
-
-<!-- ![Slide 8 Image](excellence_figs/fig_5.png) -->
-
-<!-- ![Slide 8 Image](excellence_figs/fig_4.png) -->
-
-<!-- Data Maps -->
-<!-- Each map conveys a considerable amount of information in a small space. -->
-<!-- They invite us to search for patterns and to explain their nature.    -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 9 -->
-
-<!-- ![Slide 9 Image](excellence_figs/fig_7.png) -->
-
-<!-- ![Slide 9 Image](excellence_figs/fig_6.png) -->
-
-<!-- Data Maps -->
-<!-- High death rates in the Northeast region  -->
-<!-- and Great Lakes.  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Low death rates across central and south bands.   -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Unusual spots.   -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 10 -->
-
-<!-- ![Slide 10 Image](excellence_figs/fig_9.png) -->
-
-<!-- ![Slide 10 Image](excellence_figs/fig_8.png) -->
-
-<!-- Data Maps -->
-<!-- Observations? -->
-
-
-
-
-
-<!-- Explanations?   -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 11 -->
-
-<!-- ![Slide 11 Image](excellence_figs/fig_10.png) -->
-
-<!-- Data Maps -->
-<!-- Observations? -->
-
-<!-- High death rates in the  -->
-<!-- Louisiana area. -->
-
-
-
-<!-- Explanations?   -->
-
-<!-- Exposure from asbestos  -->
-<!-- exposure.  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 12 -->
-
-<!-- ![Slide 12 Image](excellence_figs/fig_11.png) -->
-
-<!-- Data Maps -->
-<!-- Shortcomings: -->
-
-<!-- The population of each county -->
-<!-- is not considered (only area).  -->
-
-<!-- Changes across counties are  -->
-<!-- abrupt (not smooth).  -->
-
-<!-- How reliable is the data? -->
-<!-- (the diagnosis may be biased).  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 13 -->
-
-<!-- ![Slide 13 Image](excellence_figs/fig_12.png) -->
-
-<!-- Data Maps -->
-<!-- Modern data maps of  -->
-<!-- the Universe.   -->
-<!-- Computerized cartography.  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Distribution of 1.3 million galaxies in the  -->
-<!-- Northern Galactic hemisphere.    -->
-
-<!-- The darker the gray tone, -->
-<!-- the more galaxies in that region.  -->
-
-<!-- Over 2 million small regions (rectangles). -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Earth  -->
-<!-- blocking -->
-<!-- the view -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Apparent filament structures need  -->
-<!-- to validated statistically.  -->
-
-<!-- # Slide 14 -->
-
-<!-- Most of the material comes from Chapter  1 of  The Visual Display of Quantitative Information by Edward R. Tufte, 2nd Edition, Graphics Press, 2007.    -->
-<!-- Graphical Excellence -->
-
-<!-- Data Maps -->
-
-<!-- Time Series -->
-
-<!-- Space-Time Narrative Designs -->
-
-<!-- Relational Graphics -->
-
-<!-- History -->
-
-<!-- Visual Displays  Graphical Excellence   -->
-
-<!-- # Slide 15 -->
-
-<!-- ![Slide 15 Image](excellence_figs/fig_13.png) -->
-
-<!-- Time Series -->
-<!-- This is the most frequent type of graph design.  -->
-
-<!-- The x-axis contains time in one of many possible units (seconds, minutes, hours, days, months, years, etc.). -->
-
-<!-- The X-axis can be combined into multiple measurements.   -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 16 -->
-
-<!-- ![Slide 16 Image](excellence_figs/fig_14.png) -->
-
-<!-- Time Series -->
-<!-- Radio emissions from Jupiter captured by Voyager 2 (1979). -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- Maximum intensity (magnetic pole tipped toward spacecraft) -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- Distance from the planet (Jupiter radii) -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- Time -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- Orientation of -->
-<!-- Spacecraft -->
-
-
-
-
-
-
-
-
-
-<!-- Different radio  -->
-<!-- bands. -->
-<!-- Useful for  -->
-<!-- comparison.  -->
-
-
-
-
-
-
-
-
-<!-- 453,600 samples -->
-<!-- 3.6 billion bits -->
-<!-- 18,900 points -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 17 -->
-
-<!-- ![Slide 17 Image](excellence_figs/fig_15.png) -->
-
-<!-- Time Series -->
-<!-- New York City Weather Summary (1980).  -->
-
-<!-- How much can you learn from the graph? -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- The graph tells a story -->
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 18 -->
-
-<!-- ![Slide 18 Image](excellence_figs/fig_16.png) -->
-
-<!-- Time Series -->
-<!-- Mareys graphical train schedule for Paris to Lyon (1880s).   -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Arrivals and  -->
-<!-- Departures.  -->
-
-
-
-
-
-
-
-
-<!-- Length of stop  -->
-
-
-
-
-
-<!-- Focus on the slope of the lines. -->
-<!-- That corresponds to the speed of the train.   -->
-
-
-
-
-
-
-
-
-
-<!-- # Slide 19 -->
-
-<!-- ![Slide 19 Image](excellence_figs/fig_17.png) -->
-
-<!-- Time Series -->
-<!-- Mareys graphical train  -->
-<!-- schedule for Paris to Lyon.  -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Extremely fast train came in 1981.   -->
-
-
-
-
-
-
-
-
-
-<!-- # Slide 20 -->
-
-<!-- ![Slide 20 Image](excellence_figs/fig_19.png) -->
-
-<!-- ![Slide 20 Image](excellence_figs/fig_18.png) -->
-
-<!-- Time Series -->
-<!-- Time series can focus on the graphical evolution of body parts.   -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 21 -->
-
-<!-- ![Slide 21 Image](excellence_figs/fig_20.png) -->
-
-<!-- Time Series -->
-<!-- We have not talked about causation. Time series graphs do not necessarily convey causal explanations. -->
-<!-- This can be achieved by adding more variables to the graph.   -->
-
-<!-- But there are exceptions to simple graphs conveying causal information:   -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Outgoing mail (millions) by incumbent representatives. -->
-
-<!-- Representatives use the privilege of free mail to send many letters  -->
-<!-- during re-election campaigns.  -->
-
-
-
-
-
-
-
-
-<!-- # Slide 22 -->
-
-<!-- Most of the material comes from Chapter  1 of  The Visual Display of Quantitative Information by Edward R. Tufte, 2nd Edition, Graphics Press, 2007.    -->
-<!-- Graphical Excellence -->
-
-<!-- Data Maps -->
-
-<!-- Time Series -->
-
-<!-- Space-Time Narrative Designs -->
-
-<!-- Relational Graphics -->
-
-<!-- History -->
-
-<!-- Visual Displays  Graphical Excellence   -->
-
-<!-- # Slide 23 -->
-
-<!-- ![Slide 23 Image](excellence_figs/fig_21.png) -->
-
-<!-- Space-Time Narrative Designs -->
-<!-- Time-series graphs can be enhanced by adding spatial dimensions. -->
-
-<!-- This adds multivariate complexity that should be easy to visualize and interpret. -->
-
-<!-- Example: Life-cycle of the Japanese beetle:  -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 24 -->
-
-<!-- ![Slide 24 Image](excellence_figs/fig_22.png) -->
-
-<!-- Space-Time Narrative Designs -->
-<!-- An all-time favorite graph shows the fate of Napoleons army in Russia (1812-1813). See the reference book for an explanation.   -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 25 -->
-
-<!-- ![Slide 25 Image](excellence_figs/fig_23.png) -->
-
-<!-- Space-Time Narrative Designs -->
-<!-- One more example is the levels of air pollutants in southern California during the day:     -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 26 -->
-
-<!-- Most of the material comes from Chapter  1 of  The Visual Display of Quantitative Information by Edward R. Tufte, 2nd Edition, Graphics Press, 2007.    -->
-<!-- Graphical Excellence -->
-
-<!-- Data Maps -->
-
-<!-- Time Series -->
-
-<!-- Space-Time Narrative Designs -->
-
-<!-- Relational Graphics -->
-
-<!-- History -->
-
-<!-- Visual Displays  Graphical Excellence   -->
-
-<!-- # Slide 27 -->
-
-<!-- ![Slide 27 Image](excellence_figs/fig_24.png) -->
-
-<!-- Relational Graphics -->
-<!-- It is similar to previous graphs, but the dimensions can differ from spatial coordinates. -->
-<!-- The word relational refers to the dependence of two variables (any variables). -->
-
-<!-- Example:    Each circle refers to a country.  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- The size of the circle correlates  -->
-<!-- with the area of the country. -->
-
-<!-- The line on the left is the  -->
-<!-- population in millions -->
-
-<!-- The line on the right is the -->
-<!-- taxes collected in millions -->
-<!-- of pounds.   -->
-
-
-
-
-
-
-
-<!-- What is important -->
-<!-- is the sign of the slope -->
-<!-- for every connecting line.    -->
-
-
-
-
-
-
-
-
-<!-- # Slide 28 -->
-
-<!-- ![Slide 28 Image](excellence_figs/fig_25.png) -->
-
-<!-- Relational Graphics -->
-<!-- Relational graphs are the greatest of graphical designs. -->
-<!-- They help look for causal information.   -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- The relationship of lung cancer and smoking.     -->
-
-
-
-
-
-
-
-
-<!-- # Slide 29 -->
-
-<!-- ![Slide 29 Image](excellence_figs/fig_26.png) -->
-
-<!-- Relational Graphics -->
-<!-- Relational graphs are the greatest of graphical designs. -->
-<!-- They help look for causal information.   -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Is there a connection between inflation and unemployment? -->
-
-<!-- Apparently NOT!     -->
-
-
-
-
-
-
-
-
-<!-- # Slide 30 -->
-
-<!-- ![Slide 30 Image](excellence_figs/fig_27.png) -->
-
-<!-- Relational Graphics -->
-<!-- Graphs can be very informative. -->
-
-<!-- Data points can convey a lot of information. -->
-
-
-
-
-
-
-
-
-
-
-<!-- Rage (x-axis) vs Fear (y-axis): -->
-
-
-
-
-
-
-
-
-<!-- # Slide 31 -->
-
-<!-- Most of the material comes from Chapter  1 of  The Visual Display of Quantitative Information by Edward R. Tufte, 2nd Edition, Graphics Press, 2007.    -->
-<!-- Graphical Excellence -->
-
-<!-- Data Maps -->
-
-<!-- Time Series -->
-
-<!-- Space-Time Narrative Designs -->
-
-<!-- Relational Graphics -->
-
-<!-- History -->
-
-<!-- Visual Displays  Graphical Excellence   -->
-
-<!-- # Slide 32 -->
-
-<!-- History -->
-<!-- First, data maps were created thousands of years ago.  -->
-
-<!-- A significant map of the eleventh century was found in China. -->
-
-<!-- In the sixteenth century, maps began to show similarities to modern maps.  -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 5,000 years back -->
-<!-- Geographic maps in clay tablets  -->
-<!-- 11th century -->
-<!-- Detailed map -->
-<!--   China  -->
-<!-- 16th century -->
-<!-- Maps look similar -->
-<!-- to modern graphs -->
-<!--    Europe  -->
-
-
-
-
-
-<!--     1750  -->
-<!--     1800  -->
-<!-- Graphics, time series, -->
-<!-- Scatter plots, multivariate displays. -->
-<!-- William Playfair  -->
-
-<!-- 1686 Edmonds Haley -->
-<!-- Map of trade winds and  -->
-<!-- monsoons on a world map.  -->
-
-
-<!-- # Slide 33 -->
-
-<!-- ![Slide 33 Image](excellence_figs/fig_28.png) -->
-
-<!-- History -->
-
-<!-- Edmond Halleys 1686 chart. -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 34 -->
-
-<!-- ![Slide 34 Image](excellence_figs/fig_29.png) -->
-
-<!-- History -->
-
-<!-- 1854 -->
-<!-- Location of Cholera deaths in  -->
-<!-- Central London. -->
-<!-- Dr. John Snow.   -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Pumps  -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- Pump in Broad Street at the center of  -->
-<!-- the outbreak.   -->
-
-<!-- The handle of the pump was removed  -->
-<!-- and the disease did not spread any more.  -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 35 -->
-
-<!-- ![Slide 35 Image](excellence_figs/fig_31.png) -->
-
-<!-- ![Slide 35 Image](excellence_figs/fig_30.png) -->
-
-<!-- History -->
-
-<!-- Great inventors of modern graphical design.  -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- Johan Heinrich Lambert -->
-<!-- Swiss-German scientist and  -->
-<!-- mathematician  -->
-<!-- 1728-1777 -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- He pioneered the idea of map projections. -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 36 -->
-
-<!-- ![Slide 36 Image](excellence_figs/fig_33.png) -->
-
-<!-- ![Slide 36 Image](excellence_figs/fig_32.png) -->
-
-<!-- History -->
-
-<!-- Great inventors of modern graphical design.  -->
-
-
-
-
-
-
-
-
-
-
-
-<!-- William Playfair -->
-<!-- Scottish political economist  -->
-<!-- 1759-1823 -->
-<!-- (published the first time series economic data). -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- He created many types of charts. -->
-<!-- A popular one is the bar chart.  -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- He worked as a millwright, engineer, draftsman,  -->
-<!-- accountant, inventor, silversmith, merchant, investment broker, economist, statistician, pamphleteer, translator, publicist, land speculator, convict, banker, ardent royalist, editor, blackmailer, and journalist.  (extracted from Wikipedia).  -->
-
-<!-- # Slide 37 -->
-
-<!-- ![Slide 37 Image](excellence_figs/fig_34.png) -->
-
-<!-- History -->
-
-<!-- William Playfair showed in this graph prices, wages, and reigns of the British monarchy.  -->
-<!-- The novelty lies in combining all that information in one graph.    -->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- # Slide 38 -->
-
-<!-- ![Slide 38 Image](excellence_figs/fig_35.png) -->
-
-<!-- Summary - Conclusions -->
-
-<!-- Good graphs succinctly convey substantial information. -->
-
-<!-- Coming up with a good design is challenging.  -->
-
-<!-- Ideas must be conveyed with clarity, precision, and efficiency.  -->
-
-
-
-
+First, data maps were created thousands of years ago.
+
+A significant map of the eleventh century was found in China.
+
+In the sixteenth century, maps began to show similarities to modern maps.
+
+\begin{itemize}
+  \item 5,000 years back: Geographic maps in clay tablets
+  \item 11th century: Detailed map in China
+  \item 16th century: Maps look similar to modern graphs in Europe
+  \item 1750-1800: Graphics, time series, scatter plots, multivariate displays by William Playfair
+  \item 1686 Edmond Halley: Map of trade winds and monsoons on a world map.
+\end{itemize}
+
+# Slide 33
+
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_28.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\footnotesize
+History
+
+Edmond Halley's 1686 chart.
+\end{minipage}
+
+# Slide 34
+
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_29.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\footnotesize
+History
+
+1854
+
+Location of Cholera deaths in Central London by Dr. John Snow.
+
+\begin{itemize}
+  \item Pump in Broad Street at the center of the outbreak.
+  \item The handle of the pump was removed, and the disease did not spread any more.
+\end{itemize}
+\end{minipage}
+
+# Slide 35
+
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_31.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_30.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\footnotesize
+History
+
+Great inventors of modern graphical design.
+
+\begin{itemize}
+  \item Johan Heinrich Lambert: Swiss-German scientist and mathematician (1728-1777)
+  \item Pioneered the idea of map projections.
+\end{itemize}
+\end{minipage}
+
+# Slide 36
+
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_33.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_32.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\footnotesize
+History
+
+Great inventors of modern graphical design.
+
+\begin{itemize}
+  \item William Playfair: Scottish political economist (1759-1823)
+  \item Published the first time series economic data and created many types of charts, including the bar chart.
+  \item Diverse professional background including work as a millwright, engineer, draftsman, accountant, inventor, and more.
+\end{itemize}
+\end{minipage}
+
+# Slide 37
+
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_34.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\footnotesize
+History
+
+William Playfair showed in this graph prices, wages, and reigns of the British monarchy.
+
+The novelty lies in combining all that information in one graph.
+\end{minipage}
+
+# Slide 38
+
+\begin{minipage}{0.45\textwidth}
+\centering
+\includegraphics[width=\textwidth]{excellence_figs/fig_35.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\footnotesize
+Summary - Conclusions
+
+\begin{itemize}
+  \item Good graphs succinctly convey substantial information.
+  \item Coming up with a good design is challenging.
+  \item Ideas must be conveyed with clarity, precision, and efficiency.
+\end{itemize}
+\end{minipage}
