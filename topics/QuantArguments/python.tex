@@ -1,0 +1,334 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\usetheme[]{metropolis}
+\usecolortheme{seahorse}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{xcolor}
+\definecolor{myorange}{RGB}{255, 94, 77}
+\setbeamertemplate{footline}{}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Introduction to Python},
+  pdfauthor={(\textbackslash text\{Professor Dave\})\^{}2},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Introduction to Python}
+\author{\((\text{Professor Dave})^2\)}
+\date{}
+\institute{The University of Austin}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Introduction to Python}
+\phantomsection\label{introduction-to-python}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{What is Python?}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Python is a versatile, high-level programming language.
+  \item
+    Used in web development, data analysis, machine learning,
+    automation, and more.
+  \end{itemize}
+\item
+  \textbf{Why Python?}
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Easy to learn and read.
+  \item
+    Extensive community and resources.
+  \item
+    Powerful libraries for various fields: science, art, business, and
+    more.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Value-prop for STEM}
+\phantomsection\label{value-prop-for-stem}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Data Science \& Machine Learning}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Libraries: NumPy, Pandas, TensorFlow, SciPy.
+  \item
+    Used for data manipulation, statistical analysis, and building
+    models.
+  \end{itemize}
+\item
+  \textbf{Engineering \& Simulations}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Used in simulations, optimization, and algorithmic computations.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Value-prop for Humanities?}
+\phantomsection\label{value-prop-for-humanities}
+Yes!
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Text Analysis \& Digital Humanities}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Libraries: NLTK, spaCy for natural language processing.
+  \item
+    Analyze large amounts of text for sentiment, themes, and word
+    frequencies.
+  \end{itemize}
+\item
+  \textbf{Creative Arts \& Media}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Python is used in image processing, media production, and art
+    installations.
+  \item
+    Libraries like PIL (Pillow) and Pygame.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Basic Python Syntax (Quick Overview)}
+\phantomsection\label{basic-python-syntax-quick-overview}
+\begin{itemize}
+\item
+  \textbf{Variables \& Types}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OperatorTok{=} \DecValTok{10}  \CommentTok{\# Integer}
+\NormalTok{name }\OperatorTok{=} \StringTok{"Alice"}  \CommentTok{\# String}
+\NormalTok{is\_student }\OperatorTok{=} \VariableTok{True}  \CommentTok{\# Boolean}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{Functions}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{def}\NormalTok{ greet():}
+    \BuiltInTok{print}\NormalTok{(}\StringTok{"Hello, world!"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{Loops \& Conditionals}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{for}\NormalTok{ i }\KeywordTok{in} \BuiltInTok{range}\NormalTok{(}\DecValTok{5}\NormalTok{):}
+    \ControlFlowTok{if}\NormalTok{ i }\OperatorTok{\%} \DecValTok{2} \OperatorTok{==} \DecValTok{0}\NormalTok{:}
+        \BuiltInTok{print}\NormalTok{(i, }\StringTok{"is even"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Installing Python}
+\phantomsection\label{installing-python}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Step 1: Download Python}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Go to \href{https://python.org}{python.org}.
+  \item
+    Click ``Downloads'' and select your operating system (Windows,
+    macOS, Linux).
+  \end{itemize}
+\item
+  \textbf{Step 2: Install Python}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Follow installation instructions on screen.
+  \item
+    Ensure you check the box to ``Add Python to PATH.''
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]{Using Python}
+\phantomsection\label{using-python}
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Step 1: Open a Terminal/Command Prompt}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Type \texttt{python} or \texttt{python3} to start the Python
+    interpreter.
+  \end{itemize}
+\item
+  \textbf{Step 2: Running Scripts}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Create a \texttt{.py} file using a text editor (e.g., Sublime Text,
+    Notepad++).
+  \item
+    Run the script in the terminal: \texttt{python\ script\_name.py}.
+  \end{itemize}
+\item
+  \textbf{Step 3: Using Jupyter Notebooks}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Install with \texttt{pip\ install\ notebook}.
+  \item
+    Start a notebook by typing \texttt{jupyter\ notebook} in your
+    terminal.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\end{document}

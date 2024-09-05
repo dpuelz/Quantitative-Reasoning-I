@@ -1,0 +1,96 @@
+---
+title: "Introduction to Python"
+author: "\\((\\text{Professor Dave})^2\\)"
+institute: "The University of Austin"
+output:
+  beamer_presentation:
+    theme: "metropolis"
+    colortheme: "seahorse"
+    latex_engine: "xelatex"
+    keep_tex: true
+header-includes:
+  - \usepackage{xcolor}
+  - \definecolor{myorange}{RGB}{255, 94, 77}
+  - \setbeamertemplate{footline}{}
+---
+
+## Introduction to Python
+
+- **What is Python?**
+  - Python is a versatile, high-level programming language.
+  - Used in web development, data analysis, machine learning, automation, and more.
+  
+- **Why Python?**
+  - Easy to learn and read.
+  - Extensive community and resources.
+  - Powerful libraries for various fields: science, art, business, and more.
+
+## Value-prop for STEM
+
+- **Data Science & Machine Learning**:
+  - Libraries: NumPy, Pandas, TensorFlow, SciPy.
+  - Used for data manipulation, statistical analysis, and building models.
+- **Engineering & Simulations**:
+  - Used in simulations, optimization, and algorithmic computations.
+
+## Value-prop for Humanities?
+
+Yes!
+
+- **Text Analysis & Digital Humanities**:
+  - Libraries: NLTK, spaCy for natural language processing.
+  - Analyze large amounts of text for sentiment, themes, and word frequencies.
+  
+  
+- **Creative Arts & Media**:
+  - Python is used in image processing, media production, and art installations.
+  - Libraries like PIL (Pillow) and Pygame.
+
+## Basic Python Syntax (Quick Overview)
+
+- **Variables & Types**:
+
+  ```python
+  x = 10  # Integer
+  name = "Alice"  # String
+  is_student = True  # Boolean
+  ```
+
+- **Functions**:
+
+  ```python
+  def greet():
+      print("Hello, world!")
+  ```
+
+- **Loops & Conditionals**:
+
+  ```python
+  for i in range(5):
+      if i % 2 == 0:
+          print(i, "is even")
+  ```
+
+## Installing Python
+
+- **Step 1: Download Python**:
+  - Go to [python.org](https://python.org).
+  - Click "Downloads" and select your operating system (Windows, macOS, Linux).
+
+- **Step 2: Install Python**:
+  - Follow installation instructions on screen.
+  - Ensure you check the box to "Add Python to PATH."
+
+## Using Python
+
+- **Step 1: Open a Terminal/Command Prompt**:
+  - Type `python` or `python3` to start the Python interpreter.
+
+- **Step 2: Running Scripts**:
+  - Create a `.py` file using a text editor (e.g., Sublime Text, Notepad++).
+  - Run the script in the terminal: `python script_name.py`.
+
+- **Step 3: Using Jupyter Notebooks**:
+  - Install with `pip install notebook`.
+  - Start a notebook by typing `jupyter notebook` in your terminal.
+

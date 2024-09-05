@@ -1,6 +1,7 @@
 ---
 title: "Graphical Excellence"
 author: "\\((\\text{Professor Dave})^2\\)"
+institute: "The University of Austin"
 output:
   beamer_presentation:
     theme: "metropolis"
@@ -9,7 +10,8 @@ output:
     keep_tex: true
 header-includes:
   - \usepackage{xcolor}
-  - \definecolor{myorange}{RGB}{255, 94, 77} 
+  - \definecolor{myorange}{RGB}{255, 94, 77}
+  - \setbeamertemplate{footline}{}
 ---
 
 # Outline

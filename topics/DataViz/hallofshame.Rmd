@@ -2,10 +2,17 @@
 title: "Graphical Unexcellence"
 subtitle: "Data Viz Hall of Shame"
 author: "\\((\\text{Professor Dave})^2\\)"
-output: 
+institute: "The University of Austin"
+output:
   beamer_presentation:
-    theme: "metropolis"  # Modern and simple theme
-    fonttheme: "professionalfonts" # Modern font
+    theme: "metropolis"
+    colortheme: "seahorse"
+    latex_engine: "xelatex"
+    keep_tex: true
+header-includes:
+  - \usepackage{xcolor}
+  - \definecolor{myorange}{RGB}{255, 94, 77}
+  - \setbeamertemplate{footline}{}
 ---
 
 ```{r setup, include=FALSE}
@@ -13,141 +20,268 @@ knitr::opts_chunk$set(echo = FALSE)
 knitr::opts_chunk$set(cache = TRUE,fig.cap = " ")
 ```
 
-
 # Outline
 
+-   Plotting pitfalls: Hall of shame
+-   Plot critiques
+-   The grammar of graphics
+-   The five most important plots
+-   Enriching plots (color, faceting, labels, etc)
 
-- test
+# Plotting pitfalls
 
-# Figure 1
-![](hallofshame_figs/fig_1.png)
+-   \textcolor{orange}{Axis trickery (a.k.a. “little y lies”)}
+-   Violations of basic math
+-   Nearly content-free figures
+-   Gratuitous chartjunk
+-   Poorly chosen 3D graphics
+-   Bad design choices
 
-# Figure 10
-![](hallofshame_figs/fig_10.png)
+# 
 
-# Figure 11
-![](hallofshame_figs/fig_11.png)
-
-# Figure 12
-![](hallofshame_figs/fig_12.png)
-
-# Figure 15
-![](hallofshame_figs/fig_15.png)
-
-# Figure 16
-![](hallofshame_figs/fig_16.png)
-
-# Figure 17
-![](hallofshame_figs/fig_17.png)
-
-# Figure 18
-![](hallofshame_figs/fig_18.png)
-
-# Figure 19
-![](hallofshame_figs/fig_19.png)
-
-# Figure 21
-![](hallofshame_figs/fig_21.png)
-
-# Figure 22
-![](hallofshame_figs/fig_22.png)
-
-# Figure 23
-![](hallofshame_figs/fig_23.png)
-
-# Figure 25
-![](hallofshame_figs/fig_25.png)
-
-# Figure 26
-![](hallofshame_figs/fig_26.png)
-
-# Figure 27
-![](hallofshame_figs/fig_27.png)
-
-# Figure 29
-![](hallofshame_figs/fig_29.png)
-
-# Figure 30
-![](hallofshame_figs/fig_30.png)
-
-# Figure 31
-![](hallofshame_figs/fig_31.png)
-
-# Figure 32
-![](hallofshame_figs/fig_32.png)
-
-# Figure 34
-![](hallofshame_figs/fig_34.png)
-
-# Figure 35
-![](hallofshame_figs/fig_35.png)
-
-# Figure 36
-![](hallofshame_figs/fig_36.png)
-
-# Figure 37
-![](hallofshame_figs/fig_37.png)
-
-# Figure 38
-![](hallofshame_figs/fig_38.png)
-
-# Figure 39
-![](hallofshame_figs/fig_39.png)
-
-# Figure 43
-![](hallofshame_figs/fig_43.png)
-
-# Figure 46
-![](hallofshame_figs/fig_46.png)
-
-# Figure 47
-![](hallofshame_figs/fig_47.png)
-
-# Figure 48
-![](hallofshame_figs/fig_48.png)
-
-# Figure 53
-![](hallofshame_figs/fig_53.png)
-
-# Figure 54
-![](hallofshame_figs/fig_54.png)
-
-# Figure 58
-![](hallofshame_figs/fig_58.png)
-
-# Figure 61
-![](hallofshame_figs/fig_61.png)
-
-# Figure 62
-![](hallofshame_figs/fig_62.png)
-
-# Figure 63
-![](hallofshame_figs/fig_63.png)
-
-# Figure 64
-![](hallofshame_figs/fig_64.png)
-
-# Figure 70
-![](hallofshame_figs/fig_70.png)
-
-# Figure 75
-![](hallofshame_figs/fig_75.png)
-
-# Figure 76
-![](hallofshame_figs/fig_76.png)
-
-# Figure 77
-![](hallofshame_figs/fig_77.png)
-
-# Figure 5
 ![](hallofshame_figs/fig_5.png)
 
-# Figure 6
+# 
+
 ![](hallofshame_figs/fig_6.png)
 
-# Figure 7
+# 
+
 ![](hallofshame_figs/fig_7.png)
 
-# Figure 8
+# 
+
 ![](hallofshame_figs/fig_8.png)
-```
+
+# 
+
+\centering
+
+\huge __And yet ...__
+
+# 
+
+![](hallofshame_figs/fig_10.png)
+
+#
+
+![](hallofshame_figs/fig_11.png)
+
+#
+
+![](hallofshame_figs/fig_12.png)
+
+# Truncating the vertical axis is sometimes ok
+
+-   When you're trying to emphasize change, rather than relative magnitude.
+-   When you're plotting data over time.
+-   When zero is not a sensible baseline for comparison.
+
+\textcolor{orange}{Bottom line} ... use your judgment; don't mislead people; watch out for "little y lies."
+
+
+# Plotting pitfalls
+
+-   Axis trickery (a.k.a. “little y lies”)
+-   \textcolor{orange}{Violations of basic math}
+-   Nearly content-free figures
+-   Gratuitous chartjunk
+-   Poorly chosen 3D graphics
+-   Bad design choices
+
+
+#
+
+![](hallofshame_figs/fig_15.png)
+
+# 
+
+![](hallofshame_figs/fig_16.png)
+
+# 
+
+![](hallofshame_figs/fig_17.png)
+
+# 
+
+![](hallofshame_figs/fig_18.png)
+
+
+# 
+
+![](hallofshame_figs/fig_19.png)
+
+# Plotting pitfalls
+
+-   Axis trickery (a.k.a. “little y lies”)
+-   Violations of basic math
+-   \textcolor{orange}{Nearly content-free figures}
+-   Gratuitous chartjunk
+-   Poorly chosen 3D graphics
+-   Bad design choices
+
+
+# 
+
+![](hallofshame_figs/fig_21.png)
+
+# 
+
+![](hallofshame_figs/fig_22.png)
+
+# 
+
+![](hallofshame_figs/fig_23.png)
+
+# Plotting pitfalls
+
+-   Axis trickery (a.k.a. “little y lies”)
+-   Violations of basic math
+-   Nearly content-free figures
+-   \textcolor{orange}{Gratuitous chartjunk}
+-   Poorly chosen 3D graphics
+-   Bad design choices
+
+
+#
+
+![](hallofshame_figs/fig_25.png)
+
+#
+
+![](hallofshame_figs/fig_26.png)
+
+#
+
+![](hallofshame_figs/fig_27.png)
+
+
+# Plotting pitfalls
+
+-   Axis trickery (a.k.a. “little y lies”)
+-   Violations of basic math
+-   Nearly content-free figures
+-   Gratuitous chartjunk
+-   \textcolor{orange}{Poorly chosen 3D graphics}
+-   Bad design choices
+
+
+#
+
+![](hallofshame_figs/fig_29.png)
+
+#
+
+![](hallofshame_figs/fig_30.png)
+
+#
+
+![](hallofshame_figs/fig_31.png)
+
+#
+
+![](hallofshame_figs/fig_32.png)
+
+
+# Plotting pitfalls
+
+-   Axis trickery (a.k.a. “little y lies”)
+-   Violations of basic math
+-   Nearly content-free figures
+-   Gratuitous chartjunk
+-   Poorly chosen 3D graphics
+-   \textcolor{orange}{Bad design choices}
+
+#
+
+![](hallofshame_figs/fig_34.png)
+
+#
+
+![](hallofshame_figs/fig_35.png)
+
+#
+
+![](hallofshame_figs/fig_36.png)
+
+#
+
+![](hallofshame_figs/fig_37.png)
+
+#
+
+![](hallofshame_figs/fig_38.png)
+
+#
+
+![](hallofshame_figs/fig_39.png)
+
+
+# Your turn!
+
+- Break in the groups of 2-3 and answer the following questions about the next figure:
+
+\begin{enumerate}
+  \item What is this figure trying to convey, and is it successful or not?
+  \item If successful, what features make it so?  If unsuccessful, what would you change to make it the best graphic ever?
+\end{enumerate}
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_43.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_46.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_47.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_48.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_53.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_54.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_58.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_61.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_62.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_63.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_64.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_70.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_75.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_76.png) -->
+
+<!-- # -->
+
+<!-- ![](hallofshame_figs/fig_77.png) -->
