@@ -12,7 +12,7 @@ Intellectual Foundations course offered by the STEM Center @UATX
 ### Visual display of quantitative information
 
 - [Excellence](topics/DataViz/excellence.pdf)
-- [Unexcellence](topics/DataViz/unexcellence.pdf)
+- [Unexcellence](topics/DataViz/hallofshame.pdf)
 - [Integrity](topics/DataViz/integrity.pdf)
 - [Theory](topics/DataViz/theory.pdf)
 
