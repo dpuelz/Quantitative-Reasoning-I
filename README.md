@@ -7,18 +7,19 @@ Intellectual Foundations course offered by the STEM Center @UATX
 
 ### Introduction to the course
 
-- [Intro slides](topics/Introduction/intro.pdf)
+- Slides: [Intro slides](topics/Introduction/intro.pdf)
 
 ### Visual display of quantitative information
 
-- [Excellence](topics/DataViz/excellence.pdf)
-- [Unexcellence](topics/DataViz/hallofshame.pdf)
-- [Integrity](topics/DataViz/integrity.pdf)
-- [Theory](topics/DataViz/theory.pdf)
+- Slides: [Excellence](topics/DataViz/excellence.pdf)
+- Slides: [Unexcellence](topics/DataViz/hallofshame.pdf)
+- Slides: [Integrity](topics/DataViz/integrity.pdf)
+- Slides: [Theory](topics/DataViz/theory.pdf)
 
 ### Constructing quantitative arguments
 
-- [Introduction to Python](QuantArguments/python.pdf)
+- Slides: [Introduction to Python](topics/QuantArguments/python.pdf)
+- Code: [intro_text_python.ipynb](notebooks/intro_text_python.ipynb)
 
 ### Quantities, rates, growth, decay
 
