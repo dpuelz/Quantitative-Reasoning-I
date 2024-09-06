@@ -226,9 +226,9 @@ knitr::opts_chunk$set(cache = TRUE,fig.cap = " ")
   \item If successful, what features make it so?  If unsuccessful, what would you change to make it the best graphic ever?
 \end{enumerate}
 
-<!-- # -->
+#
 
-<!-- ![](hallofshame_figs/fig_43.png) -->
+![](hallofshame_figs/fig_43.png)
 
 <!-- # -->
 
