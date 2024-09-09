@@ -1,6 +1,6 @@
 ---
 title: "Graphical Excellence"
-author: "\\((\\text{Professor Dave})^2\\)"
+author: "Professors David Ruth and David Puelz"
 institute: "The University of Austin"
 output:
   beamer_presentation:
@@ -129,11 +129,11 @@ High death rates in the Louisiana area. \textcolor{orange}{Asbestos exposure}
 
 \textcolor{orange}{Shortcomings}:
 
-- The population of each county is not considered (only area).
+- Visual importance of each county is tied to its geographic area (rather than, say, the number of people living in the county).
 
 - Changes across counties are abrupt (not smooth).
 
-- How reliable is the data? (the diagnosis may be biased).
+- How reliable are the data? (E.g., the diagnoses may be biased).
 
 # Modern data maps
 
@@ -217,7 +217,7 @@ Extremely fast train came in 1981.
 \end{minipage}
 
 
-Time series can focus on the graphical evolution of body parts.
+Time series can focus on the movement of body parts.
 
 # Time series
 
@@ -280,7 +280,7 @@ during re-election campaigns.
 One more example is the levels of air pollutants in southern California during the day.
 \end{minipage}
 
-# Relational Graphics
+# Relational graphics
 
 \begin{minipage}{1\textwidth}
 \centering
@@ -511,5 +511,6 @@ One more example is the levels of air pollutants in southern California during t
   \item Good graphs succinctly convey substantial information.
   \item Coming up with a good design is challenging.
   \item Ideas must be conveyed with clarity, precision, and efficiency.
+  \item \textcolor{orange}{Give the viewer the greatest number of ideas in the shortest amount of time with the least ink in the smallest space.}
 \end{itemize}
 \end{minipage}

@@ -1,6 +1,6 @@
 ---
-title: "Introduction to Python"
-author: "\\((\\text{Professor Dave})^2\\)"
+title: "Introduction to Quantitative Reasoning I"
+author: "Professors David Ruth and David Puelz"
 institute: "The University of Austin"
 output:
   beamer_presentation:
@@ -11,8 +11,49 @@ header-includes:
   - \usepackage{xcolor}
   - \definecolor{myorange}{RGB}{255, 94, 77}
   - \setbeamertemplate{footline}{}
+  
 ---
 
 ## Introduction
 
-- The quick brown fox
+- About your instructors
+- About the course
+
+## Quantitative Reasoning I is...
+...the first of a two-course sequence in quantitative reasoning.
+
+Topics include interpretation of graphical information, functional notation, patterns, mathematical problem formulation.
+
+Throughout the course examples will be drawn from a variety of fields including physics, biology, and economics; there will be particular emphasis on the laws of nature and analogies among them.
+
+## Course administration and syllabus
+![]("intro_figs/Populi1.jpeg")
+
+## Introduction to Visual Display of Quantitative Information
+
+\begingroup
+\fontfamily{phv}\fontsize{16}{18}\selectfont
+\begin{center}
+  SEE TABLE HANDOUTS
+\end{center}
+\endgroup
+
+## Table 1
+```{r, echo=FALSE, out.width="85%", fig.cap="Data from Table 1."}
+knitr::include_graphics("intro_figs/tab1.jpeg")
+```
+
+## Table 2
+```{r, echo=FALSE, out.width="85%", fig.cap="Data from Table 2."}
+knitr::include_graphics("intro_figs/tab2.jpeg")
+```
+
+## Table 3
+```{r, echo=FALSE, out.width="85%", fig.cap="Data from Table 3."}
+knitr::include_graphics("intro_figs/tab3.jpeg")
+```
+
+<!-- ## A famous figure (ref. Tufte p.41) -->
+<!-- ```{r, echo=FALSE, out.width="100%"} -->
+<!-- knitr::include_graphics("intro_figs/Napoleon.png") -->
+<!-- ``` -->
