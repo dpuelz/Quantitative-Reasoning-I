@@ -22,6 +22,8 @@ Intellectual Foundations course offered by the STEM Center @UATX
 
 - Slides: [Introduction to Python](topics/QuantArguments/python.pdf)
 - Code: [intro_text_python.ipynb](notebooks/intro_text_python.ipynb)
+	- Add in simpler code introducing super-basic concepts
+	- Include Alex's code
 
 ### Quantities, rates, growth, decay
 
