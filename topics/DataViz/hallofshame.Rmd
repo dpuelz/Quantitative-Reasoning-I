@@ -13,6 +13,8 @@ header-includes:
   - \usepackage{xcolor}
   - \definecolor{myorange}{RGB}{255, 94, 77}
   - \setbeamertemplate{footline}{}
+fig_width: 6 
+fig_height: 4 
 ---
 
 ```{r setup, include=FALSE}

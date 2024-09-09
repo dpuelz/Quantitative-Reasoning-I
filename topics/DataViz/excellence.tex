@@ -80,17 +80,15 @@
 \newif\ifbibliography
 \usepackage{graphicx}
 \makeatletter
-\newsavebox\pandoc@box
-\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
-  \sbox\pandoc@box{#1}%
-  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
-  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
-  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
-  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
-  \else\usebox{\pandoc@box}%
-  \fi%
-}
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
 % Set default figure placement to htbp
+\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
@@ -100,17 +98,20 @@
 \usepackage{xcolor}
 \definecolor{myorange}{RGB}{255, 94, 77}
 \setbeamertemplate{footline}{}
-\usepackage{bookmark}
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
   pdftitle={Graphical Excellence},
-  pdfauthor={(\textbackslash text\{Professor Dave\})\^{}2},
+  pdfauthor={Professors David Ruth and David Puelz},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
 \title{Graphical Excellence}
-\author{\((\text{Professor Dave})^2\)}
+\author{Professors David Ruth and David Puelz}
 \date{}
 \institute{The University of Austin}
 
@@ -118,7 +119,7 @@
 \frame{\titlepage}
 
 \begin{frame}{Outline}
-\phantomsection\label{outline}
+\protect\hypertarget{outline}{}
 \emph{The Visual Display of Quantitative Information} provides a rich
 story of graph types and excellence including:
 
@@ -139,7 +140,7 @@ story of graph types and excellence including:
 \end{frame}
 
 \begin{frame}{How is excellence achieved?}
-\phantomsection\label{how-is-excellence-achieved}
+\protect\hypertarget{how-is-excellence-achieved}{}
 When complex ideas are expressed with:
 
 \begin{itemize}
@@ -167,27 +168,27 @@ How do we get there?
 \end{frame}
 
 \begin{frame}{Why visualize? \textcolor{orange}{Anscombe's Quartet}}
-\phantomsection\label{why-visualize}
-\pandocbounded{\includegraphics[keepaspectratio]{excellence_figs/fig_1.png}}
+\protect\hypertarget{why-visualize}{}
+\includegraphics{excellence_figs/fig_1.png}
 \end{frame}
 
 \begin{frame}{Why visualize? \textcolor{orange}{Anscombe's Quartet}}
-\phantomsection\label{why-visualize-1}
-\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{excellence_figs/fig_2.png}
+\protect\hypertarget{why-visualize-1}{}
+\includegraphics[width=0.8\textwidth,height=\textheight]{excellence_figs/fig_2.png}
 
 Simple statistics fail to exhibit the data trend! Remember to always
 visualize!
 \end{frame}
 
 \begin{frame}{Why visualize? \textcolor{orange}{Anomaly detection}}
-\phantomsection\label{why-visualize-2}
-\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{excellence_figs/fig_3.png}
+\protect\hypertarget{why-visualize-2}{}
+\includegraphics[width=0.8\textwidth,height=\textheight]{excellence_figs/fig_3.png}
 
 Showing the data clearly reveals anomalies.
 \end{frame}
 
 \begin{frame}{Data maps}
-\phantomsection\label{data-maps}
+\protect\hypertarget{data-maps}{}
 \begin{minipage}{0.3\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_5.png}
@@ -204,7 +205,7 @@ They invite us to search for patterns and to explain their nature.
 \end{frame}
 
 \begin{frame}{Data maps}
-\phantomsection\label{data-maps-1}
+\protect\hypertarget{data-maps-1}{}
 \begin{minipage}{0.3\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_7.png}
@@ -221,7 +222,7 @@ Low death rates across central and south bands.
 \end{frame}
 
 \begin{frame}{Data maps}
-\phantomsection\label{data-maps-2}
+\protect\hypertarget{data-maps-2}{}
 \begin{minipage}{0.3\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_9.png}
@@ -240,29 +241,30 @@ Explanations?
 \end{frame}
 
 \begin{frame}{Data maps}
-\phantomsection\label{data-maps-3}
-\pandocbounded{\includegraphics[keepaspectratio]{excellence_figs/fig_10.png}}
+\protect\hypertarget{data-maps-3}{}
+\includegraphics{excellence_figs/fig_10.png}
 
 High death rates in the Louisiana area.
 \textcolor{orange}{Asbestos exposure}
 \end{frame}
 
 \begin{frame}{Data maps}
-\phantomsection\label{data-maps-4}
+\protect\hypertarget{data-maps-4}{}
 \textcolor{orange}{Shortcomings}:
 
 \begin{itemize}
 \item
-  The population of each county is not considered (only area).
+  Visual importance of each county is tied to its geographic area
+  (rather than, say, the number of people living in the county).
 \item
   Changes across counties are abrupt (not smooth).
 \item
-  How reliable is the data? (the diagnosis may be biased).
+  How reliable are the data? (E.g., the diagnoses may be biased).
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Modern data maps}
-\phantomsection\label{modern-data-maps}
+\protect\hypertarget{modern-data-maps}{}
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_12.png}
@@ -278,8 +280,8 @@ High death rates in the Louisiana area.
 \end{frame}
 
 \begin{frame}{Time series}
-\phantomsection\label{time-series}
-\pandocbounded{\includegraphics[keepaspectratio]{excellence_figs/fig_13.png}}
+\protect\hypertarget{time-series}{}
+\includegraphics{excellence_figs/fig_13.png}
 
 \begin{itemize}
 \item
@@ -291,8 +293,8 @@ High death rates in the Louisiana area.
 \end{frame}
 
 \begin{frame}{Time series}
-\phantomsection\label{time-series-1}
-\pandocbounded{\includegraphics[keepaspectratio]{excellence_figs/fig_14.png}}
+\protect\hypertarget{time-series-1}{}
+\includegraphics{excellence_figs/fig_14.png}
 
 \begin{itemize}
 \item
@@ -307,10 +309,10 @@ High death rates in the Louisiana area.
 \end{frame}
 
 \begin{frame}{Time series}
-\phantomsection\label{time-series-2}
+\protect\hypertarget{time-series-2}{}
 \textcolor{orange}{New York City} weather summary (1980)
 
-\includegraphics[width=0.95\linewidth,height=\textheight,keepaspectratio]{excellence_figs/fig_15.png}
+\includegraphics[width=0.95\textwidth,height=\textheight]{excellence_figs/fig_15.png}
 
 How much can you learn from the graph?
 
@@ -318,10 +320,10 @@ The graph tells a story!
 \end{frame}
 
 \begin{frame}{Time series}
-\phantomsection\label{time-series-3}
+\protect\hypertarget{time-series-3}{}
 Graphical train schedule for Paris to Lyon (1880s).
 
-\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio]{excellence_figs/fig_16.png}
+\includegraphics[width=0.9\textwidth,height=\textheight]{excellence_figs/fig_16.png}
 \textcolor{orange}{y-axis}: Arrivals/departures, top: Paris, bottom:
 Lyon.
 
@@ -330,7 +332,7 @@ of the train.
 \end{frame}
 
 \begin{frame}{Time series}
-\phantomsection\label{time-series-4}
+\protect\hypertarget{time-series-4}{}
 \centering
 
 \includegraphics[width=0.4\textwidth]{excellence_figs/fig_17.png}
@@ -339,7 +341,7 @@ Extremely fast train came in 1981.
 \end{frame}
 
 \begin{frame}{Time series}
-\phantomsection\label{time-series-5}
+\protect\hypertarget{time-series-5}{}
 \centering
 \begin{minipage}{0.55\textwidth}
 \centering
@@ -351,11 +353,11 @@ Extremely fast train came in 1981.
 \includegraphics[width=\textwidth]{excellence_figs/fig_18.png}
 \end{minipage}
 
-Time series can focus on the graphical evolution of body parts.
+Time series can focus on the movement of body parts.
 \end{frame}
 
 \begin{frame}{Time series}
-\phantomsection\label{time-series-6}
+\protect\hypertarget{time-series-6}{}
 \begin{center}
 \includegraphics[width=0.55\textwidth]{excellence_figs/fig_20.png}
 \end{center}
@@ -371,7 +373,7 @@ during re-election campaigns.
 \end{frame}
 
 \begin{frame}{Space-time narrative designs}
-\phantomsection\label{space-time-narrative-designs}
+\protect\hypertarget{space-time-narrative-designs}{}
 \begin{minipage}{1\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_21.png}
@@ -389,7 +391,7 @@ during re-election campaigns.
 \end{frame}
 
 \begin{frame}{Space-time narrative designs}
-\phantomsection\label{space-time-narrative-designs-1}
+\protect\hypertarget{space-time-narrative-designs-1}{}
 \begin{minipage}{1\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_22.png}
@@ -406,7 +408,7 @@ during re-election campaigns.
 \end{frame}
 
 \begin{frame}{Space-time narrative designs}
-\phantomsection\label{space-time-narrative-designs-2}
+\protect\hypertarget{space-time-narrative-designs-2}{}
 \begin{minipage}{1\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_23.png}
@@ -419,8 +421,8 @@ One more example is the levels of air pollutants in southern California during t
 \end{minipage}
 \end{frame}
 
-\begin{frame}{Relational Graphics}
-\phantomsection\label{relational-graphics}
+\begin{frame}{Relational graphics}
+\protect\hypertarget{relational-graphics}{}
 \begin{minipage}{1\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_24.png}
@@ -436,7 +438,7 @@ One more example is the levels of air pollutants in southern California during t
 \end{frame}
 
 \begin{frame}{Relational Graphics}
-\phantomsection\label{relational-graphics-1}
+\protect\hypertarget{relational-graphics-1}{}
 \begin{minipage}{1\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_24.png}
@@ -452,7 +454,7 @@ One more example is the levels of air pollutants in southern California during t
 \end{frame}
 
 \begin{frame}{Relational graphics}
-\phantomsection\label{relational-graphics-2}
+\protect\hypertarget{relational-graphics-2}{}
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_25.png}
@@ -469,7 +471,7 @@ One more example is the levels of air pollutants in southern California during t
 \end{frame}
 
 \begin{frame}{Relational graphics}
-\phantomsection\label{relational-graphics-3}
+\protect\hypertarget{relational-graphics-3}{}
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_26.png}
@@ -487,7 +489,7 @@ One more example is the levels of air pollutants in southern California during t
 \end{frame}
 
 \begin{frame}{Relational graphics}
-\phantomsection\label{relational-graphics-4}
+\protect\hypertarget{relational-graphics-4}{}
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_27.png}
@@ -505,7 +507,7 @@ One more example is the levels of air pollutants in southern California during t
 \end{frame}
 
 \begin{frame}{Summary}
-\phantomsection\label{summary}
+\protect\hypertarget{summary}{}
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_35.png}
@@ -517,6 +519,7 @@ One more example is the levels of air pollutants in southern California during t
   \item Good graphs succinctly convey substantial information.
   \item Coming up with a good design is challenging.
   \item Ideas must be conveyed with clarity, precision, and efficiency.
+  \item \textcolor{orange}{Give the viewer the greatest number of ideas in the shortest amount of time with the least ink in the smallest space.}
 \end{itemize}
 \end{minipage}
 \end{frame}
