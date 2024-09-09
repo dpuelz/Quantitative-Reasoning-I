@@ -12,10 +12,11 @@ Intellectual Foundations course offered by the STEM Center @UATX
 ### Visual display of quantitative information
 
 - Slides: [Excellence](topics/DataViz/excellence.pdf)
-- Slides: [Unexcellence](topics/DataViz/hallofshame.pdf)
-- Slides: Integrity
+- Slides: [Unexcellence + Integrity](topics/DataViz/hallofshame.pdf)
+	- Add integrity concepts mentioned on HW, including the Lie Factor!
 - Slides: Theory
 - Code: [dataviz.ipynb](notebooks/dataviz.ipynb)
+- Code: [icecream.ipynb](notebooks/icecream.ipynb)
 
 ### Constructing quantitative arguments
 
