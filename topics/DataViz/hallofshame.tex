@@ -80,15 +80,17 @@
 \newif\ifbibliography
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
@@ -98,10 +100,7 @@
 \usepackage{xcolor}
 \definecolor{myorange}{RGB}{255, 94, 77}
 \setbeamertemplate{footline}{}
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
@@ -120,7 +119,7 @@
 \frame{\titlepage}
 
 \begin{frame}{Outline}
-\protect\hypertarget{outline}{}
+\phantomsection\label{outline}
 \begin{itemize}
 \tightlist
 \item
@@ -137,7 +136,7 @@
 \end{frame}
 
 \begin{frame}{Plotting pitfalls}
-\protect\hypertarget{plotting-pitfalls}{}
+\phantomsection\label{plotting-pitfalls}
 \begin{itemize}
 \tightlist
 \item
@@ -156,49 +155,49 @@
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section}{}
-\includegraphics{hallofshame_figs/fig_5.png}
+\phantomsection\label{section}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_5.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-1}{}
-\includegraphics{hallofshame_figs/fig_6.png}
+\phantomsection\label{section-1}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_6.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-2}{}
-\includegraphics{hallofshame_figs/fig_7.png}
+\phantomsection\label{section-2}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_7.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-3}{}
-\includegraphics{hallofshame_figs/fig_8.png}
+\phantomsection\label{section-3}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_8.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-4}{}
+\phantomsection\label{section-4}
 \centering
 
 \huge \textbf{And yet \ldots{}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-5}{}
-\includegraphics{hallofshame_figs/fig_10.png}
+\phantomsection\label{section-5}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_10.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-6}{}
-\includegraphics{hallofshame_figs/fig_11.png}
+\phantomsection\label{section-6}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_11.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-7}{}
-\includegraphics{hallofshame_figs/fig_12.png}
+\phantomsection\label{section-7}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_12.png}}
 \end{frame}
 
 \begin{frame}{Truncating the vertical axis is sometimes ok}
-\protect\hypertarget{truncating-the-vertical-axis-is-sometimes-ok}{}
+\phantomsection\label{truncating-the-vertical-axis-is-sometimes-ok}
 \begin{itemize}
 \tightlist
 \item
@@ -215,7 +214,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{Plotting pitfalls}
-\protect\hypertarget{plotting-pitfalls-1}{}
+\phantomsection\label{plotting-pitfalls-1}
 \begin{itemize}
 \tightlist
 \item
@@ -234,32 +233,32 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-8}{}
-\includegraphics{hallofshame_figs/fig_15.png}
+\phantomsection\label{section-8}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_15.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-9}{}
-\includegraphics{hallofshame_figs/fig_16.png}
+\phantomsection\label{section-9}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_16.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-10}{}
-\includegraphics{hallofshame_figs/fig_17.png}
+\phantomsection\label{section-10}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_17.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-11}{}
-\includegraphics{hallofshame_figs/fig_18.png}
+\phantomsection\label{section-11}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_18.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-12}{}
-\includegraphics{hallofshame_figs/fig_19.png}
+\phantomsection\label{section-12}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_19.png}}
 \end{frame}
 
 \begin{frame}{Plotting pitfalls}
-\protect\hypertarget{plotting-pitfalls-2}{}
+\phantomsection\label{plotting-pitfalls-2}
 \begin{itemize}
 \tightlist
 \item
@@ -278,22 +277,22 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-13}{}
-\includegraphics{hallofshame_figs/fig_21.png}
+\phantomsection\label{section-13}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_21.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-14}{}
-\includegraphics{hallofshame_figs/fig_22.png}
+\phantomsection\label{section-14}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_22.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-15}{}
-\includegraphics{hallofshame_figs/fig_23.png}
+\phantomsection\label{section-15}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_23.png}}
 \end{frame}
 
 \begin{frame}{Plotting pitfalls}
-\protect\hypertarget{plotting-pitfalls-3}{}
+\phantomsection\label{plotting-pitfalls-3}
 \begin{itemize}
 \tightlist
 \item
@@ -312,22 +311,22 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-16}{}
-\includegraphics{hallofshame_figs/fig_25.png}
+\phantomsection\label{section-16}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_25.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-17}{}
-\includegraphics{hallofshame_figs/fig_26.png}
+\phantomsection\label{section-17}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_26.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-18}{}
-\includegraphics{hallofshame_figs/fig_27.png}
+\phantomsection\label{section-18}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_27.png}}
 \end{frame}
 
 \begin{frame}{Plotting pitfalls}
-\protect\hypertarget{plotting-pitfalls-4}{}
+\phantomsection\label{plotting-pitfalls-4}
 \begin{itemize}
 \tightlist
 \item
@@ -346,27 +345,27 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-19}{}
-\includegraphics{hallofshame_figs/fig_29.png}
+\phantomsection\label{section-19}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_29.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-20}{}
-\includegraphics{hallofshame_figs/fig_30.png}
+\phantomsection\label{section-20}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_30.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-21}{}
-\includegraphics{hallofshame_figs/fig_31.png}
+\phantomsection\label{section-21}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_31.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-22}{}
-\includegraphics{hallofshame_figs/fig_32.png}
+\phantomsection\label{section-22}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_32.png}}
 \end{frame}
 
 \begin{frame}{Plotting pitfalls}
-\protect\hypertarget{plotting-pitfalls-5}{}
+\phantomsection\label{plotting-pitfalls-5}
 \begin{itemize}
 \tightlist
 \item
@@ -385,37 +384,37 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-23}{}
-\includegraphics{hallofshame_figs/fig_34.png}
+\phantomsection\label{section-23}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_34.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-24}{}
-\includegraphics{hallofshame_figs/fig_35.png}
+\phantomsection\label{section-24}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_35.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-25}{}
-\includegraphics{hallofshame_figs/fig_36.png}
+\phantomsection\label{section-25}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_36.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-26}{}
-\includegraphics{hallofshame_figs/fig_37.png}
+\phantomsection\label{section-26}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_37.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-27}{}
-\includegraphics{hallofshame_figs/fig_38.png}
+\phantomsection\label{section-27}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_38.png}}
 \end{frame}
 
 \begin{frame}{}
-\protect\hypertarget{section-28}{}
-\includegraphics{hallofshame_figs/fig_39.png}
+\phantomsection\label{section-28}
+\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_39.png}}
 \end{frame}
 
 \begin{frame}{Your turn!}
-\protect\hypertarget{your-turn}{}
+\phantomsection\label{your-turn}
 \begin{itemize}
 \tightlist
 \item
