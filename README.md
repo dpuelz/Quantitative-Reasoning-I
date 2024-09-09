@@ -12,15 +12,18 @@ Intellectual Foundations course offered by the STEM Center @UATX
 ### Visual display of quantitative information
 
 - Slides: [Excellence](topics/DataViz/excellence.pdf)
-- Slides: [Unexcellence](topics/DataViz/hallofshame.pdf)
-- Slides: [Integrity](topics/DataViz/integrity.pdf)
-- Slides: [Theory](topics/DataViz/theory.pdf)
+- Slides: [Unexcellence + Integrity](topics/DataViz/hallofshame.pdf)
+	- Add integrity concepts mentioned on HW, including the Lie Factor!
+- Slides: Theory
 - Code: [dataviz.ipynb](notebooks/dataviz.ipynb)
+- Code: [icecream.ipynb](notebooks/icecream.ipynb)
 
 ### Constructing quantitative arguments
 
 - Slides: [Introduction to Python](topics/QuantArguments/python.pdf)
 - Code: [intro_text_python.ipynb](notebooks/intro_text_python.ipynb)
+	- Add in simpler code introducing super-basic concepts
+	- Include Alex's code
 
 ### Quantities, rates, growth, decay
 
