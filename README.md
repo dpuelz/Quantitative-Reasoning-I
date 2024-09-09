@@ -13,8 +13,8 @@ Intellectual Foundations course offered by the STEM Center @UATX
 
 - Slides: [Excellence](topics/DataViz/excellence.pdf)
 - Slides: [Unexcellence](topics/DataViz/hallofshame.pdf)
-- Slides: [Integrity](topics/DataViz/integrity.pdf)
-- Slides: [Theory](topics/DataViz/theory.pdf)
+- Slides: Integrity
+- Slides: Theory
 - Code: [dataviz.ipynb](notebooks/dataviz.ipynb)
 
 ### Constructing quantitative arguments
