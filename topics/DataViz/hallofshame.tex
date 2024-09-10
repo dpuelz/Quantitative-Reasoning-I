@@ -78,21 +78,6 @@
 \makeatother
 \usepackage{xcolor}
 \newif\ifbibliography
-\usepackage{graphicx}
-\makeatletter
-\newsavebox\pandoc@box
-\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
-  \sbox\pandoc@box{#1}%
-  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
-  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
-  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
-  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
-  \else\usebox{\pandoc@box}%
-  \fi%
-}
-% Set default figure placement to htbp
-\def\fps@figure{htbp}
-\makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
@@ -104,12 +89,12 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={Graphical Unexcellence},
+  pdftitle={Graphical Unexcellence + Integrity},
   pdfauthor={(\textbackslash text\{Professor Dave\})\^{}2},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
 
-\title{Graphical Unexcellence}
+\title{Graphical Unexcellence + Integrity}
 \subtitle{Data Viz Hall of Shame}
 \author{\((\text{Professor Dave})^2\)}
 \date{}
@@ -128,10 +113,6 @@
   Plot critiques
 \item
   The grammar of graphics
-\item
-  The five most important plots
-\item
-  Enriching plots (color, faceting, labels, etc)
 \end{itemize}
 \end{frame}
 
@@ -156,22 +137,50 @@
 
 \begin{frame}{}
 \phantomsection\label{section}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_5.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_5.png}
+        };
+    \end{tikzpicture}
+
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-1}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_6.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_6.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-2}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_7.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_7.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-3}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_8.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_8.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{The Lie Factor}
+\phantomsection\label{the-lie-factor}
+\begin{equation*}
+\text{Lie Factor} = \frac{\text{size of effect shown in graphic}}{\text{size of effect in data}}
+\end{equation*}
+
+If inflating actual effect, Lie Factor will be
+\textcolor{orange}{greater than 1}. If deflating actual effect, Lie
+Factor will be \textcolor{orange}{less than 1}.
 \end{frame}
 
 \begin{frame}{}
@@ -183,17 +192,29 @@
 
 \begin{frame}{}
 \phantomsection\label{section-5}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_10.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_10.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-6}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_11.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_11.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-7}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_12.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_12.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Truncating the vertical axis is sometimes ok}
@@ -234,27 +255,47 @@ mislead people; watch out for ``little y lies.''
 
 \begin{frame}{}
 \phantomsection\label{section-8}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_15.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_15.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-9}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_16.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_16.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-10}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_17.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_17.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-11}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_18.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_18.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-12}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_19.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_19.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Plotting pitfalls}
@@ -278,17 +319,29 @@ mislead people; watch out for ``little y lies.''
 
 \begin{frame}{}
 \phantomsection\label{section-13}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_21.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_21.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-14}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_22.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_22.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-15}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_23.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_23.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Plotting pitfalls}
@@ -312,17 +365,29 @@ mislead people; watch out for ``little y lies.''
 
 \begin{frame}{}
 \phantomsection\label{section-16}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_25.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_25.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-17}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_26.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_26.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-18}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_27.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_27.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Plotting pitfalls}
@@ -346,22 +411,38 @@ mislead people; watch out for ``little y lies.''
 
 \begin{frame}{}
 \phantomsection\label{section-19}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_29.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_29.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-20}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_30.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_30.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-21}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_31.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_31.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-22}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_32.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_32.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Plotting pitfalls}
@@ -385,32 +466,56 @@ mislead people; watch out for ``little y lies.''
 
 \begin{frame}{}
 \phantomsection\label{section-23}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_34.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_34.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-24}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_35.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_35.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-25}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_36.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_36.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-26}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_37.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_37.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-27}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_38.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_38.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-28}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_39.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_39.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{Your turn!}
@@ -430,7 +535,65 @@ mislead people; watch out for ``little y lies.''
 
 \begin{frame}{}
 \phantomsection\label{section-29}
-\pandocbounded{\includegraphics[keepaspectratio]{hallofshame_figs/fig_43.png}}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_43.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-30}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_44.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-31}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_45.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-32}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_46.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-33}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_47.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-34}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_48.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-35}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_49.png}
+        };
+    \end{tikzpicture}
 \end{frame}
 
 \end{document}

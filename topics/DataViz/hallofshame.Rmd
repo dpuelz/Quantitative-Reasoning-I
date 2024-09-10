@@ -1,5 +1,5 @@
 ---
-title: "Graphical Unexcellence"
+title: "Graphical Unexcellence + Integrity"
 subtitle: "Data Viz Hall of Shame"
 author: "\\((\\text{Professor Dave})^2\\)"
 institute: "The University of Austin"
@@ -27,8 +27,8 @@ knitr::opts_chunk$set(cache = TRUE,fig.cap = " ")
 -   Plotting pitfalls: Hall of shame
 -   Plot critiques
 -   The grammar of graphics
--   The five most important plots
--   Enriching plots (color, faceting, labels, etc)
+<!-- -   The five most important plots -->
+<!-- -   Enriching plots (color, faceting, labels, etc) -->
 
 # Plotting pitfalls
 
@@ -41,19 +41,53 @@ knitr::opts_chunk$set(cache = TRUE,fig.cap = " ")
 
 # 
 
-![](hallofshame_figs/fig_5.png)
+ \begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_5.png}
+        };
+    \end{tikzpicture}
+
+ <!-- \centering -->
+ <!--    \resizebox{\paperwidth}{\paperheight}{\includegraphics{hallofshame_figs/fig_5.png}} -->
+<!-- ![](hallofshame_figs/fig_5.png) -->
 
 # 
 
-![](hallofshame_figs/fig_6.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_6.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_6.png) -->
 
 # 
 
-![](hallofshame_figs/fig_7.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_7.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_7.png) -->
 
 # 
 
-![](hallofshame_figs/fig_8.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_8.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_8.png) -->
+
+# The Lie Factor
+
+\begin{equation*}
+\text{Lie Factor} = \frac{\text{size of effect shown in graphic}}{\text{size of effect in data}}
+\end{equation*}
+
+If inflating actual effect, Lie Factor will be \textcolor{orange}{greater than 1}.  If deflating actual effect, Lie Factor will be \textcolor{orange}{less than 1}.
 
 # 
 
@@ -63,15 +97,33 @@ knitr::opts_chunk$set(cache = TRUE,fig.cap = " ")
 
 # 
 
-![](hallofshame_figs/fig_10.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_10.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_10.png) -->
 
 #
 
-![](hallofshame_figs/fig_11.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_11.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_11.png) -->
 
 #
 
-![](hallofshame_figs/fig_12.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_12.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_12.png) -->
 
 # Truncating the vertical axis is sometimes ok
 
@@ -94,24 +146,54 @@ knitr::opts_chunk$set(cache = TRUE,fig.cap = " ")
 
 #
 
-![](hallofshame_figs/fig_15.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_15.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_15.png) -->
 
 # 
 
-![](hallofshame_figs/fig_16.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_16.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_16.png) -->
 
 # 
 
-![](hallofshame_figs/fig_17.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_17.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_17.png) -->
 
 # 
 
-![](hallofshame_figs/fig_18.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_18.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_18.png) -->
 
 
 # 
 
-![](hallofshame_figs/fig_19.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_19.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_19.png) -->
 
 # Plotting pitfalls
 
@@ -125,15 +207,33 @@ knitr::opts_chunk$set(cache = TRUE,fig.cap = " ")
 
 # 
 
-![](hallofshame_figs/fig_21.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_21.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_21.png) -->
 
 # 
 
-![](hallofshame_figs/fig_22.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_22.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_22.png) -->
 
 # 
 
-![](hallofshame_figs/fig_23.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_23.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_23.png) -->
 
 # Plotting pitfalls
 
@@ -147,15 +247,33 @@ knitr::opts_chunk$set(cache = TRUE,fig.cap = " ")
 
 #
 
-![](hallofshame_figs/fig_25.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_25.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_25.png) -->
 
 #
 
-![](hallofshame_figs/fig_26.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_26.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_26.png) -->
 
 #
 
-![](hallofshame_figs/fig_27.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_27.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_27.png) -->
 
 
 # Plotting pitfalls
@@ -170,19 +288,43 @@ knitr::opts_chunk$set(cache = TRUE,fig.cap = " ")
 
 #
 
-![](hallofshame_figs/fig_29.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_29.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_29.png) -->
 
 #
 
-![](hallofshame_figs/fig_30.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_30.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_30.png) -->
 
 #
 
-![](hallofshame_figs/fig_31.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_31.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_31.png) -->
 
 #
 
-![](hallofshame_figs/fig_32.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_32.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_32.png) -->
 
 
 # Plotting pitfalls
@@ -196,27 +338,64 @@ knitr::opts_chunk$set(cache = TRUE,fig.cap = " ")
 
 #
 
-![](hallofshame_figs/fig_34.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_34.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_34.png) -->
 
 #
 
-![](hallofshame_figs/fig_35.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_35.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_35.png) -->
 
 #
 
-![](hallofshame_figs/fig_36.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_36.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_36.png) -->
 
 #
 
-![](hallofshame_figs/fig_37.png)
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_37.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_37.png) -->
 
 #
 
-![](hallofshame_figs/fig_38.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_38.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_38.png) -->
 
 #
 
-![](hallofshame_figs/fig_39.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_39.png}
+        };
+    \end{tikzpicture}
+
+<!-- ![](hallofshame_figs/fig_39.png) -->
 
 
 # Your turn!
@@ -230,7 +409,68 @@ knitr::opts_chunk$set(cache = TRUE,fig.cap = " ")
 
 #
 
-![](hallofshame_figs/fig_43.png)
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_43.png}
+        };
+    \end{tikzpicture}
+
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_44.png}
+        };
+    \end{tikzpicture}
+    
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_45.png}
+        };
+    \end{tikzpicture}
+    
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_46.png}
+        };
+    \end{tikzpicture}
+    
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_47.png}
+        };
+    \end{tikzpicture}
+
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_48.png}
+        };
+    \end{tikzpicture}
+    
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_49.png}
+        };
+    \end{tikzpicture}
+
+
+
+
+
+
+
+
+<!-- ![](hallofshame_figs/fig_43.png) -->
 
 <!-- # -->
 
