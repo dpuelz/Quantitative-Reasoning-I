@@ -13,7 +13,6 @@ Intellectual Foundations course offered by the STEM Center @UATX
 
 - Slides: [Excellence](topics/DataViz/excellence.pdf)
 - Slides: [Unexcellence + Integrity](topics/DataViz/hallofshame.pdf)
-	- Add integrity concepts mentioned on HW, including the Lie Factor!
 - Slides: Theory
 - Code: [dataviz.ipynb](notebooks/dataviz.ipynb)
 - Code: [icecream.ipynb](notebooks/icecream.ipynb)
