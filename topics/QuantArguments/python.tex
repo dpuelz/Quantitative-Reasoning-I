@@ -55,8 +55,6 @@
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\usetheme[]{metropolis}
-\usecolortheme{seahorse}
 \ifPDFTeX\else
   % xetex/luatex font selection
 \fi
@@ -122,9 +120,64 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
-\usepackage{xcolor}
-\definecolor{myorange}{RGB}{255, 94, 77}
-\setbeamertemplate{footline}{}
+\definecolor{burntorange}{rgb}{0.968, 0.549, 0.114}
+\definecolor{burntorangedark}{rgb}{0.486, 0.306, 0.102}
+\definecolor{lightblue}{rgb}{0.161, 0.471, 1}
+\definecolor{lightbluedark}{rgb}{0.125, 0.271, 0.510}
+\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
+\definecolor{darkgray}{rgb}{0.3, 0.3, 0.3}
+\definecolor{darkgrey}{rgb}{0.33, 0.33, 0.33}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}
+\setbeamercolor{structure}{fg=darkgray}
+\setbeamercolor{footline}{fg=darkgray}
+\usepackage{amssymb, bm}
+\usepackage{amsmath, amsfonts, amscd, epsfig, amssymb, amsthm, adjustbox}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=9pt, label={--}}
+\usepackage{anyfontsize}
+\usepackage{tcolorbox}[most]
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{bbold}
+\usepackage{mathtools}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Q}[1]{>{\columncolor[gray]{0.8}\centering\arraybackslash}p{#1}}
+\newcommand\eho{\stackrel{\mathclap{\small\mbox{$H_0$}}}{=}}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\newcommand\smalldp{\fontsize{9.4}{7.2}\selectfont}
+\newcommand\smalldpp{\fontsize{8.5}{7.2}\selectfont}
+\newcommand\smalldppgh{\fontsize{9.5}{7.2}\selectfont}
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+\newcommand{\bo}[1]{\textcolor{burntorange}{#1}}
+\newcommand{\bod}[1]{\textcolor{burntorangedark}{#1}}
+\newcommand{\lb}[1]{\textcolor{lightblue}{#1}}
+\newcommand{\lbd}[1]{\textcolor{lightbluedark}{#1}}
+\newcommand{\dg}[1]{\textcolor{darkgray}{#1}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ib}{\end{itemize}}
+\newcommand{\p}{\item}
+\newcommand{\sk}{\vspace{.5cm}}
+\newcommand{\sko}{\vspace{.1in}}
+\newcommand{\skoo}{\vspace{.2in}}
+\newcommand{\skooo}{\vspace{.3in}}
+\newcommand{\skoooo}{\vspace{.05in}}
+\newcommand{\hko}{\hspace{.1in}}
+\newcommand{\hkoo}{\hspace{.2in}}
+\newcommand{\hkooo}{\hspace{.3in}}
+\newcommand{\bb}{$\lb{{\small \bullet } }$ \hspace{0.5mm}}
+\newcommand{\ba}{$\lb{{\small \rightarrow } }$ \hspace{0.5mm}}
+\setbeamertemplate{footline}{\scriptsize{\hfill\insertframenumber\vspace{-.2cm}\hspace*{.35cm}}}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -157,6 +210,8 @@
     Used in web development, data analysis, machine learning,
     automation, and more.
   \end{itemize}
+
+  \vspace{.5cm}
 \item
   \textbf{Why Python?}
 
@@ -188,6 +243,8 @@
     Used for data manipulation, statistical analysis, and building
     models.
   \end{itemize}
+
+  \vspace{.5cm}
 \item
   \textbf{Engineering \& Simulations}:
 
@@ -216,6 +273,8 @@ Yes!
     Analyze large amounts of text for sentiment, themes, and word
     frequencies.
   \end{itemize}
+
+  \vspace{.5cm}
 \item
   \textbf{Creative Arts \& Media}:
 

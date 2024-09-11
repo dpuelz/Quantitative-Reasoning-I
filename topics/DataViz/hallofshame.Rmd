@@ -5,17 +5,70 @@ author: "\\((\\text{Professor Dave})^2\\)"
 institute: "The University of Austin"
 output:
   beamer_presentation:
-    theme: "metropolis"
-    colortheme: "seahorse"
+    theme: "default"
     latex_engine: "xelatex"
     keep_tex: true
 header-includes:
-  - \usepackage{xcolor}
-  - \definecolor{myorange}{RGB}{255, 94, 77}
-  - \setbeamertemplate{footline}{}
-fig_width: 6 
-fig_height: 4 
+  - \definecolor{burntorange}{rgb}{0.968, 0.549, 0.114}
+  - \definecolor{burntorangedark}{rgb}{0.486, 0.306, 0.102}
+  - \definecolor{lightblue}{rgb}{0.161, 0.471, 1}
+  - \definecolor{lightbluedark}{rgb}{0.125, 0.271, 0.510}
+  - \definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
+  - \definecolor{darkgray}{rgb}{0.3, 0.3, 0.3}
+  - \definecolor{darkgrey}{rgb}{0.33, 0.33, 0.33}
+  - \definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+  - \definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}
+  - \setbeamercolor{structure}{fg=darkgray}
+  - \setbeamercolor{footline}{fg=darkgray}
+  - \usepackage{amssymb, bm}
+  - \usepackage{amsmath, amsfonts, amscd, epsfig, amssymb, amsthm, adjustbox}
+  - \usepackage{textcomp}
+  - \usepackage{graphicx}
+  - \usepackage{setspace}
+  - \usepackage{enumitem}
+  - \setlist[itemize]{itemsep=9pt, label={--}}
+  - \usepackage{anyfontsize}
+  - \usepackage{tcolorbox}[most]
+  - \usepackage{tikz}
+  - \usepackage[T1]{fontenc}
+  - \usepackage{booktabs}
+  - \usepackage{colortbl}
+  - \usepackage{multirow}
+  - \usepackage{array}
+  - \usepackage{longtable}
+  - \usepackage{listings}
+  - \usepackage{color}
+  - \usepackage{bbold}
+  - \usepackage{mathtools}
+  - \newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+  - \newcolumntype{Q}[1]{>{\columncolor[gray]{0.8}\centering\arraybackslash}p{#1}}
+  - \newcommand\eho{\stackrel{\mathclap{\small\mbox{$H_0$}}}{=}}
+  - \newcommand\norm[1]{\left\lVert#1\right\rVert}
+  - \newcommand\smalldp{\fontsize{9.4}{7.2}\selectfont}
+  - \newcommand\smalldpp{\fontsize{8.5}{7.2}\selectfont}
+  - \newcommand\smalldppgh{\fontsize{9.5}{7.2}\selectfont}
+  - \newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+  - \newcommand{\bo}[1]{\textcolor{burntorange}{#1}}
+  - \newcommand{\bod}[1]{\textcolor{burntorangedark}{#1}}
+  - \newcommand{\lb}[1]{\textcolor{lightblue}{#1}}
+  - \newcommand{\lbd}[1]{\textcolor{lightbluedark}{#1}}
+  - \newcommand{\dg}[1]{\textcolor{darkgray}{#1}}
+  - \newcommand{\bi}{\begin{itemize}}
+  - \newcommand{\ib}{\end{itemize}}
+  - \newcommand{\p}{\item}
+  - \newcommand{\sk}{\vspace{.5cm}}
+  - \newcommand{\sko}{\vspace{.1in}}
+  - \newcommand{\skoo}{\vspace{.2in}}
+  - \newcommand{\skooo}{\vspace{.3in}}
+  - \newcommand{\skoooo}{\vspace{.05in}}
+  - \newcommand{\hko}{\hspace{.1in}}
+  - \newcommand{\hkoo}{\hspace{.2in}}
+  - \newcommand{\hkooo}{\hspace{.3in}}
+  - \newcommand{\bb}{$\lb{{\small \bullet } }$ \hspace{0.5mm}}
+  - \newcommand{\ba}{$\lb{{\small \rightarrow } }$ \hspace{0.5mm}}
+  - \setbeamertemplate{footline}{\scriptsize{\hfill\insertframenumber\vspace{-.2cm}\hspace*{.35cm}}} 
 ---
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -26,7 +79,8 @@ knitr::opts_chunk$set(cache = TRUE,fig.cap = " ")
 
 -   Plotting pitfalls: Hall of shame
 -   Plot critiques
--   The grammar of graphics
+-   How to do better
+-   The grammar of graphics \textcolor{gray}{(time permitting)}
 <!-- -   The five most important plots -->
 <!-- -   Enriching plots (color, faceting, labels, etc) -->
 
@@ -94,6 +148,24 @@ If inflating actual effect, Lie Factor will be \textcolor{orange}{greater than 1
 \centering
 
 \huge __And yet ...__
+
+# 
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz7.png}
+        };
+    \end{tikzpicture}
+
+
+# 
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz8.png}
+        };
+    \end{tikzpicture}
+
 
 # 
 
@@ -272,6 +344,15 @@ If inflating actual effect, Lie Factor will be \textcolor{orange}{greater than 1
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_27.png}
         };
     \end{tikzpicture}
+    
+# 
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz20.png}
+        };
+    \end{tikzpicture}
+
 
 <!-- ![](hallofshame_figs/fig_27.png) -->
 
@@ -402,10 +483,10 @@ If inflating actual effect, Lie Factor will be \textcolor{orange}{greater than 1
 
 - Break in the groups of 2-3 and answer the following questions about the next figure:
 
-\begin{enumerate}
+\begin{itemize}
   \item What is this figure trying to convey, and is it successful or not?
   \item If successful, what features make it so?  If unsuccessful, what would you change to make it the best graphic ever?
-\end{enumerate}
+\end{itemize}
 
 #
 
@@ -414,7 +495,88 @@ If inflating actual effect, Lie Factor will be \textcolor{orange}{greater than 1
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_43.png}
         };
     \end{tikzpicture}
+    
+#
 
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[height=\paperheight, keepaspectratio]{hallofshame_figs/viz31.png}
+        };
+    \end{tikzpicture}
+    
+
+# 
+
+\centering
+
+\huge __How to do better ...__
+
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz34.png}
+        };
+    \end{tikzpicture}
+
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz35.png}
+        };
+    \end{tikzpicture}
+    
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz36.png}
+        };
+    \end{tikzpicture}
+
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz37.png}
+        };
+    \end{tikzpicture}
+
+
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz38.png}
+        };
+    \end{tikzpicture}
+
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz39.png}
+        };
+    \end{tikzpicture}
+    
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz42.png}
+        };
+    \end{tikzpicture}
+    
+
+#
+
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz43.png}
+        };
+    \end{tikzpicture}
+    
 #
 
 \begin{tikzpicture}[remember picture, overlay]

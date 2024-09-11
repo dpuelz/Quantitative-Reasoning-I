@@ -55,8 +55,6 @@
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\usetheme[]{metropolis}
-\usecolortheme{seahorse}
 \ifPDFTeX\else
   % xetex/luatex font selection
 \fi
@@ -82,9 +80,64 @@
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
-\usepackage{xcolor}
-\definecolor{myorange}{RGB}{255, 94, 77}
-\setbeamertemplate{footline}{}
+\definecolor{burntorange}{rgb}{0.968, 0.549, 0.114}
+\definecolor{burntorangedark}{rgb}{0.486, 0.306, 0.102}
+\definecolor{lightblue}{rgb}{0.161, 0.471, 1}
+\definecolor{lightbluedark}{rgb}{0.125, 0.271, 0.510}
+\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
+\definecolor{darkgray}{rgb}{0.3, 0.3, 0.3}
+\definecolor{darkgrey}{rgb}{0.33, 0.33, 0.33}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}
+\setbeamercolor{structure}{fg=darkgray}
+\setbeamercolor{footline}{fg=darkgray}
+\usepackage{amssymb, bm}
+\usepackage{amsmath, amsfonts, amscd, epsfig, amssymb, amsthm, adjustbox}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=9pt, label={--}}
+\usepackage{anyfontsize}
+\usepackage{tcolorbox}[most]
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{bbold}
+\usepackage{mathtools}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Q}[1]{>{\columncolor[gray]{0.8}\centering\arraybackslash}p{#1}}
+\newcommand\eho{\stackrel{\mathclap{\small\mbox{$H_0$}}}{=}}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\newcommand\smalldp{\fontsize{9.4}{7.2}\selectfont}
+\newcommand\smalldpp{\fontsize{8.5}{7.2}\selectfont}
+\newcommand\smalldppgh{\fontsize{9.5}{7.2}\selectfont}
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+\newcommand{\bo}[1]{\textcolor{burntorange}{#1}}
+\newcommand{\bod}[1]{\textcolor{burntorangedark}{#1}}
+\newcommand{\lb}[1]{\textcolor{lightblue}{#1}}
+\newcommand{\lbd}[1]{\textcolor{lightbluedark}{#1}}
+\newcommand{\dg}[1]{\textcolor{darkgray}{#1}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ib}{\end{itemize}}
+\newcommand{\p}{\item}
+\newcommand{\sk}{\vspace{.5cm}}
+\newcommand{\sko}{\vspace{.1in}}
+\newcommand{\skoo}{\vspace{.2in}}
+\newcommand{\skooo}{\vspace{.3in}}
+\newcommand{\skoooo}{\vspace{.05in}}
+\newcommand{\hko}{\hspace{.1in}}
+\newcommand{\hkoo}{\hspace{.2in}}
+\newcommand{\hkooo}{\hspace{.3in}}
+\newcommand{\bb}{$\lb{{\small \bullet } }$ \hspace{0.5mm}}
+\newcommand{\ba}{$\lb{{\small \rightarrow } }$ \hspace{0.5mm}}
+\setbeamertemplate{footline}{\scriptsize{\hfill\insertframenumber\vspace{-.2cm}\hspace*{.35cm}}}
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -112,7 +165,9 @@
 \item
   Plot critiques
 \item
-  The grammar of graphics
+  How to do better
+\item
+  The grammar of graphics \textcolor{gray}{(time permitting)}
 \end{itemize}
 \end{frame}
 
@@ -194,7 +249,7 @@ Factor will be \textcolor{orange}{less than 1}.
 \phantomsection\label{section-5}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
-            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_10.png}
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz7.png}
         };
     \end{tikzpicture}
 \end{frame}
@@ -203,13 +258,31 @@ Factor will be \textcolor{orange}{less than 1}.
 \phantomsection\label{section-6}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
-            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_11.png}
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz8.png}
         };
     \end{tikzpicture}
 \end{frame}
 
 \begin{frame}{}
 \phantomsection\label{section-7}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_10.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-8}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_11.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-9}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_12.png}
@@ -254,7 +327,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-8}
+\phantomsection\label{section-10}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_15.png}
@@ -263,7 +336,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-9}
+\phantomsection\label{section-11}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_16.png}
@@ -272,7 +345,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-10}
+\phantomsection\label{section-12}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_17.png}
@@ -281,7 +354,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-11}
+\phantomsection\label{section-13}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_18.png}
@@ -290,7 +363,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-12}
+\phantomsection\label{section-14}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_19.png}
@@ -318,7 +391,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-13}
+\phantomsection\label{section-15}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_21.png}
@@ -327,7 +400,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-14}
+\phantomsection\label{section-16}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_22.png}
@@ -336,7 +409,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-15}
+\phantomsection\label{section-17}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_23.png}
@@ -364,7 +437,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-16}
+\phantomsection\label{section-18}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_25.png}
@@ -373,7 +446,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-17}
+\phantomsection\label{section-19}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_26.png}
@@ -382,10 +455,19 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-18}
+\phantomsection\label{section-20}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_27.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-21}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz20.png}
         };
     \end{tikzpicture}
 \end{frame}
@@ -410,7 +492,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-19}
+\phantomsection\label{section-22}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_29.png}
@@ -419,7 +501,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-20}
+\phantomsection\label{section-23}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_30.png}
@@ -428,7 +510,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-21}
+\phantomsection\label{section-24}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_31.png}
@@ -437,7 +519,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-22}
+\phantomsection\label{section-25}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_32.png}
@@ -465,7 +547,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-23}
+\phantomsection\label{section-26}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_34.png}
@@ -474,7 +556,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-24}
+\phantomsection\label{section-27}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_35.png}
@@ -483,7 +565,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-25}
+\phantomsection\label{section-28}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_36.png}
@@ -492,7 +574,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-26}
+\phantomsection\label{section-29}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_37.png}
@@ -501,7 +583,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-27}
+\phantomsection\label{section-30}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_38.png}
@@ -510,7 +592,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-28}
+\phantomsection\label{section-31}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_39.png}
@@ -527,14 +609,14 @@ mislead people; watch out for ``little y lies.''
   the next figure:
 \end{itemize}
 
-\begin{enumerate}
+\begin{itemize}
   \item What is this figure trying to convey, and is it successful or not?
   \item If successful, what features make it so?  If unsuccessful, what would you change to make it the best graphic ever?
-\end{enumerate}
+\end{itemize}
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-29}
+\phantomsection\label{section-32}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_43.png}
@@ -543,7 +625,95 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-30}
+\phantomsection\label{section-33}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[height=\paperheight, keepaspectratio]{hallofshame_figs/viz31.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-34}
+\centering
+
+\huge \textbf{How to do better \ldots{}}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-35}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz34.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-36}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz35.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-37}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz36.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-38}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz37.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-39}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz38.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-40}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz39.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-41}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz42.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-42}
+\begin{tikzpicture}[remember picture, overlay]
+        \node[at=(current page.center)] {
+            \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/viz43.png}
+        };
+    \end{tikzpicture}
+\end{frame}
+
+\begin{frame}{}
+\phantomsection\label{section-43}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_44.png}
@@ -552,7 +722,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-31}
+\phantomsection\label{section-44}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_45.png}
@@ -561,7 +731,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-32}
+\phantomsection\label{section-45}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_46.png}
@@ -570,7 +740,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-33}
+\phantomsection\label{section-46}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_47.png}
@@ -579,7 +749,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-34}
+\phantomsection\label{section-47}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_48.png}
@@ -588,7 +758,7 @@ mislead people; watch out for ``little y lies.''
 \end{frame}
 
 \begin{frame}{}
-\phantomsection\label{section-35}
+\phantomsection\label{section-48}
 \begin{tikzpicture}[remember picture, overlay]
         \node[at=(current page.center)] {
             \includegraphics[width=\paperwidth, keepaspectratio]{hallofshame_figs/fig_49.png}
