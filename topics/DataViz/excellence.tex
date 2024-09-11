@@ -55,8 +55,6 @@
   \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
 \fi
 \usepackage{lmodern}
-\usetheme[]{metropolis}
-\usecolortheme{seahorse}
 \ifPDFTeX\else
   % xetex/luatex font selection
 \fi
@@ -80,28 +78,82 @@
 \newif\ifbibliography
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 \setcounter{secnumdepth}{-\maxdimen} % remove section numbering
-\usepackage{xcolor}
-\definecolor{myorange}{RGB}{255, 94, 77}
-\setbeamertemplate{footline}{}
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\definecolor{burntorange}{rgb}{0.968, 0.549, 0.114}
+\definecolor{burntorangedark}{rgb}{0.486, 0.306, 0.102}
+\definecolor{lightblue}{rgb}{0.161, 0.471, 1}
+\definecolor{lightbluedark}{rgb}{0.125, 0.271, 0.510}
+\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
+\definecolor{darkgray}{rgb}{0.3, 0.3, 0.3}
+\definecolor{darkgrey}{rgb}{0.33, 0.33, 0.33}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}
+\setbeamercolor{structure}{fg=darkgray}
+\setbeamercolor{footline}{fg=darkgray}
+\usepackage{amssymb, bm}
+\usepackage{amsmath, amsfonts, amscd, epsfig, amssymb, amsthm, adjustbox}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=9pt, label={--}}
+\usepackage{anyfontsize}
+\usepackage{tcolorbox}[most]
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{bbold}
+\usepackage{mathtools}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Q}[1]{>{\columncolor[gray]{0.8}\centering\arraybackslash}p{#1}}
+\newcommand\eho{\stackrel{\mathclap{\small\mbox{$H_0$}}}{=}}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\newcommand\smalldp{\fontsize{9.4}{7.2}\selectfont}
+\newcommand\smalldpp{\fontsize{8.5}{7.2}\selectfont}
+\newcommand\smalldppgh{\fontsize{9.5}{7.2}\selectfont}
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+\newcommand{\bo}[1]{\textcolor{burntorange}{#1}}
+\newcommand{\bod}[1]{\textcolor{burntorangedark}{#1}}
+\newcommand{\lb}[1]{\textcolor{lightblue}{#1}}
+\newcommand{\lbd}[1]{\textcolor{lightbluedark}{#1}}
+\newcommand{\dg}[1]{\textcolor{darkgray}{#1}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ib}{\end{itemize}}
+\newcommand{\p}{\item}
+\newcommand{\sk}{\vspace{.5cm}}
+\newcommand{\sko}{\vspace{.1in}}
+\newcommand{\skoo}{\vspace{.2in}}
+\newcommand{\skooo}{\vspace{.3in}}
+\newcommand{\skoooo}{\vspace{.05in}}
+\newcommand{\hko}{\hspace{.1in}}
+\newcommand{\hkoo}{\hspace{.2in}}
+\newcommand{\hkooo}{\hspace{.3in}}
+\newcommand{\bb}{$\lb{{\small \bullet } }$ \hspace{0.5mm}}
+\newcommand{\ba}{$\lb{{\small \rightarrow } }$ \hspace{0.5mm}}
+\setbeamertemplate{footline}{\scriptsize{\hfill\insertframenumber\vspace{-.2cm}\hspace*{.35cm}}}
+\usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
@@ -119,7 +171,7 @@
 \frame{\titlepage}
 
 \begin{frame}{Outline}
-\protect\hypertarget{outline}{}
+\phantomsection\label{outline}
 \emph{The Visual Display of Quantitative Information} provides a rich
 story of graph types and excellence including:
 
@@ -140,7 +192,7 @@ story of graph types and excellence including:
 \end{frame}
 
 \begin{frame}{How is excellence achieved?}
-\protect\hypertarget{how-is-excellence-achieved}{}
+\phantomsection\label{how-is-excellence-achieved}
 When complex ideas are expressed with:
 
 \begin{itemize}
@@ -168,27 +220,27 @@ How do we get there?
 \end{frame}
 
 \begin{frame}{Why visualize? \textcolor{orange}{Anscombe's Quartet}}
-\protect\hypertarget{why-visualize}{}
-\includegraphics{excellence_figs/fig_1.png}
+\phantomsection\label{why-visualize}
+\pandocbounded{\includegraphics[keepaspectratio]{excellence_figs/fig_1.png}}
 \end{frame}
 
 \begin{frame}{Why visualize? \textcolor{orange}{Anscombe's Quartet}}
-\protect\hypertarget{why-visualize-1}{}
-\includegraphics[width=0.8\textwidth,height=\textheight]{excellence_figs/fig_2.png}
+\phantomsection\label{why-visualize-1}
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{excellence_figs/fig_2.png}
 
 Simple statistics fail to exhibit the data trend! Remember to always
 visualize!
 \end{frame}
 
 \begin{frame}{Why visualize? \textcolor{orange}{Anomaly detection}}
-\protect\hypertarget{why-visualize-2}{}
-\includegraphics[width=0.8\textwidth,height=\textheight]{excellence_figs/fig_3.png}
+\phantomsection\label{why-visualize-2}
+\includegraphics[width=0.8\linewidth,height=\textheight,keepaspectratio]{excellence_figs/fig_3.png}
 
 Showing the data clearly reveals anomalies.
 \end{frame}
 
 \begin{frame}{Data maps}
-\protect\hypertarget{data-maps}{}
+\phantomsection\label{data-maps}
 \begin{minipage}{0.3\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_5.png}
@@ -205,7 +257,7 @@ They invite us to search for patterns and to explain their nature.
 \end{frame}
 
 \begin{frame}{Data maps}
-\protect\hypertarget{data-maps-1}{}
+\phantomsection\label{data-maps-1}
 \begin{minipage}{0.3\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_7.png}
@@ -222,7 +274,7 @@ Low death rates across central and south bands.
 \end{frame}
 
 \begin{frame}{Data maps}
-\protect\hypertarget{data-maps-2}{}
+\phantomsection\label{data-maps-2}
 \begin{minipage}{0.3\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_9.png}
@@ -241,15 +293,15 @@ Explanations?
 \end{frame}
 
 \begin{frame}{Data maps}
-\protect\hypertarget{data-maps-3}{}
-\includegraphics{excellence_figs/fig_10.png}
+\phantomsection\label{data-maps-3}
+\pandocbounded{\includegraphics[keepaspectratio]{excellence_figs/fig_10.png}}
 
 High death rates in the Louisiana area.
 \textcolor{orange}{Asbestos exposure}
 \end{frame}
 
 \begin{frame}{Data maps}
-\protect\hypertarget{data-maps-4}{}
+\phantomsection\label{data-maps-4}
 \textcolor{orange}{Shortcomings}:
 
 \begin{itemize}
@@ -264,7 +316,7 @@ High death rates in the Louisiana area.
 \end{frame}
 
 \begin{frame}{Modern data maps}
-\protect\hypertarget{modern-data-maps}{}
+\phantomsection\label{modern-data-maps}
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_12.png}
@@ -280,8 +332,8 @@ High death rates in the Louisiana area.
 \end{frame}
 
 \begin{frame}{Time series}
-\protect\hypertarget{time-series}{}
-\includegraphics{excellence_figs/fig_13.png}
+\phantomsection\label{time-series}
+\pandocbounded{\includegraphics[keepaspectratio]{excellence_figs/fig_13.png}}
 
 \begin{itemize}
 \item
@@ -293,8 +345,8 @@ High death rates in the Louisiana area.
 \end{frame}
 
 \begin{frame}{Time series}
-\protect\hypertarget{time-series-1}{}
-\includegraphics{excellence_figs/fig_14.png}
+\phantomsection\label{time-series-1}
+\pandocbounded{\includegraphics[keepaspectratio]{excellence_figs/fig_14.png}}
 
 \begin{itemize}
 \item
@@ -309,10 +361,10 @@ High death rates in the Louisiana area.
 \end{frame}
 
 \begin{frame}{Time series}
-\protect\hypertarget{time-series-2}{}
+\phantomsection\label{time-series-2}
 \textcolor{orange}{New York City} weather summary (1980)
 
-\includegraphics[width=0.95\textwidth,height=\textheight]{excellence_figs/fig_15.png}
+\includegraphics[width=0.95\linewidth,height=\textheight,keepaspectratio]{excellence_figs/fig_15.png}
 
 How much can you learn from the graph?
 
@@ -320,10 +372,10 @@ The graph tells a story!
 \end{frame}
 
 \begin{frame}{Time series}
-\protect\hypertarget{time-series-3}{}
+\phantomsection\label{time-series-3}
 Graphical train schedule for Paris to Lyon (1880s).
 
-\includegraphics[width=0.9\textwidth,height=\textheight]{excellence_figs/fig_16.png}
+\includegraphics[width=0.9\linewidth,height=\textheight,keepaspectratio]{excellence_figs/fig_16.png}
 \textcolor{orange}{y-axis}: Arrivals/departures, top: Paris, bottom:
 Lyon.
 
@@ -332,7 +384,7 @@ of the train.
 \end{frame}
 
 \begin{frame}{Time series}
-\protect\hypertarget{time-series-4}{}
+\phantomsection\label{time-series-4}
 \centering
 
 \includegraphics[width=0.4\textwidth]{excellence_figs/fig_17.png}
@@ -341,7 +393,7 @@ Extremely fast train came in 1981.
 \end{frame}
 
 \begin{frame}{Time series}
-\protect\hypertarget{time-series-5}{}
+\phantomsection\label{time-series-5}
 \centering
 \begin{minipage}{0.55\textwidth}
 \centering
@@ -357,7 +409,7 @@ Time series can focus on the movement of body parts.
 \end{frame}
 
 \begin{frame}{Time series}
-\protect\hypertarget{time-series-6}{}
+\phantomsection\label{time-series-6}
 \begin{center}
 \includegraphics[width=0.55\textwidth]{excellence_figs/fig_20.png}
 \end{center}
@@ -373,7 +425,7 @@ during re-election campaigns.
 \end{frame}
 
 \begin{frame}{Space-time narrative designs}
-\protect\hypertarget{space-time-narrative-designs}{}
+\phantomsection\label{space-time-narrative-designs}
 \begin{minipage}{1\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_21.png}
@@ -391,7 +443,7 @@ during re-election campaigns.
 \end{frame}
 
 \begin{frame}{Space-time narrative designs}
-\protect\hypertarget{space-time-narrative-designs-1}{}
+\phantomsection\label{space-time-narrative-designs-1}
 \begin{minipage}{1\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_22.png}
@@ -408,7 +460,7 @@ during re-election campaigns.
 \end{frame}
 
 \begin{frame}{Space-time narrative designs}
-\protect\hypertarget{space-time-narrative-designs-2}{}
+\phantomsection\label{space-time-narrative-designs-2}
 \begin{minipage}{1\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_23.png}
@@ -422,7 +474,7 @@ One more example is the levels of air pollutants in southern California during t
 \end{frame}
 
 \begin{frame}{Relational graphics}
-\protect\hypertarget{relational-graphics}{}
+\phantomsection\label{relational-graphics}
 \begin{minipage}{1\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_24.png}
@@ -438,7 +490,7 @@ One more example is the levels of air pollutants in southern California during t
 \end{frame}
 
 \begin{frame}{Relational Graphics}
-\protect\hypertarget{relational-graphics-1}{}
+\phantomsection\label{relational-graphics-1}
 \begin{minipage}{1\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_24.png}
@@ -454,7 +506,7 @@ One more example is the levels of air pollutants in southern California during t
 \end{frame}
 
 \begin{frame}{Relational graphics}
-\protect\hypertarget{relational-graphics-2}{}
+\phantomsection\label{relational-graphics-2}
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_25.png}
@@ -471,7 +523,7 @@ One more example is the levels of air pollutants in southern California during t
 \end{frame}
 
 \begin{frame}{Relational graphics}
-\protect\hypertarget{relational-graphics-3}{}
+\phantomsection\label{relational-graphics-3}
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_26.png}
@@ -489,7 +541,7 @@ One more example is the levels of air pollutants in southern California during t
 \end{frame}
 
 \begin{frame}{Relational graphics}
-\protect\hypertarget{relational-graphics-4}{}
+\phantomsection\label{relational-graphics-4}
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_27.png}
@@ -507,7 +559,7 @@ One more example is the levels of air pollutants in southern California during t
 \end{frame}
 
 \begin{frame}{Summary}
-\protect\hypertarget{summary}{}
+\phantomsection\label{summary}
 \begin{minipage}{0.45\textwidth}
 \centering
 \includegraphics[width=\textwidth]{excellence_figs/fig_35.png}

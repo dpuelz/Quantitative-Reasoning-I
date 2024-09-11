@@ -67,6 +67,7 @@ header-includes:
   - \newcommand{\ba}{$\lb{{\small \rightarrow } }$ \hspace{0.5mm}}
   - \setbeamertemplate{footline}{\scriptsize{\hfill\insertframenumber\vspace{-.2cm}\hspace*{.35cm}}} 
 ---
+
 ## Introduction to Python
 
 - **What is Python?**
