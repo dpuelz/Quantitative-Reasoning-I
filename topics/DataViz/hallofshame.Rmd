@@ -147,7 +147,7 @@ If inflating actual effect, Lie Factor will be \textcolor{orange}{greater than 1
 
 \centering
 
-\huge __And yet ...__
+\huge \dg{And yet ...}
 
 # 
 
@@ -509,7 +509,7 @@ If inflating actual effect, Lie Factor will be \textcolor{orange}{greater than 1
 
 \centering
 
-\huge __How to do better ...__
+\huge \dg{How to do better ...}
 
 #
 
