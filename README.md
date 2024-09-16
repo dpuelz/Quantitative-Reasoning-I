@@ -14,15 +14,12 @@ Intellectual Foundations course offered by the STEM Center @UATX
 - Slides: [Excellence](topics/DataViz/excellence.pdf)
 - Slides: [Unexcellence + Integrity](topics/DataViz/hallofshame.pdf)
 - Slides: [Theory](topics/DataViz/theory.pdf)
-- Code: [dataviz.ipynb](notebooks/dataviz.ipynb)
-- Code: [icecream.ipynb](notebooks/icecream.ipynb)
 
 ### Constructing quantitative arguments
 
 - Slides: [Introduction to Python](topics/QuantArguments/python.pdf)
-- Code: [intro_text_python.ipynb](notebooks/intro_text_python.ipynb)
-	- Add in simpler code introducing super-basic concepts
-	- Include Alex's code
+- Code: [intro_text_python.ipynb](notebooks/intro-py.ipynb), [intro_text_python.ipynb](notebooks/intro_text_python.ipynb), [dataviz.ipynb](notebooks/dataviz.ipynb), [icecream.ipynb](notebooks/icecream.ipynb)
+
 
 ### Quantities, rates, growth, decay
 
