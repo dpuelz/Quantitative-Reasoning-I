@@ -13,7 +13,7 @@ Intellectual Foundations course offered by the STEM Center @UATX
 
 - Slides: [Excellence](topics/DataViz/excellence.pdf)
 - Slides: [Unexcellence + Integrity](topics/DataViz/hallofshame.pdf)
-- Slides: Theory
+- Slides: [Theory](topics/DataViz/theory.pdf)
 - Code: [dataviz.ipynb](notebooks/dataviz.ipynb)
 - Code: [icecream.ipynb](notebooks/icecream.ipynb)
 

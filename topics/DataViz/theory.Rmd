@@ -1,6 +1,6 @@
 ---
-title: "Graphical Integrity"
-author: "\\((\\text{Professor Dave})^2\\)"
+title: "Graphical Theory"
+author: "Professors David Ruth and David Puelz"
 institute: "The University of Austin"
 output:
   beamer_presentation:
@@ -12,4 +12,315 @@ header-includes:
   - \usepackage{xcolor}
   - \definecolor{myorange}{RGB}{255, 94, 77}
   - \setbeamertemplate{footline}{}
+  - \usepackage{ragged2e}
 ---
+# Visual Displays – Theory of Data Graphics 
+-   Data Ink and Graphical Redesign
+
+-   Data-Ink Maximization and Graphical Design
+
+-   Aesthetics and Technique in Data Graphical Design
+
+
+# Data Ink and Graphical Redesign
+- When designing a graph, focusing on the data-relevant information is essential.
+\pause
+- Main Goal: Reason about quantitative information. 
+\pause
+- Main Principle: Show the data.
+
+# Data Ink and Graphical Redesign
+\centering
+![](theory_figs/image9.png){width=80%}
+
+# Data Ink and Graphical Redesign
+\centering
+![](theory_figs/image21.png){width=80%}
+
+
+
+# Data Ink and Graphical Redesign
+\begin{center}
+  DIR = (amount of data-ink) / (total ink in the graph)
+\end{center}
+
+
+# Data Ink and Graphical Redesign
+\begin{flushleft}
+Example: Electroencephalogram where all lines are relevant. 
+\end{flushleft}
+
+\centering
+![](theory_figs/image3.png){width=80%}
+
+
+# Data Ink and Graphical Redesign
+\begin{flushleft}
+Another example: almost all ink shows relevant information
+\end{flushleft}
+
+\centering
+![](theory_figs/image17.png){width=80%}
+
+# Data Ink and Graphical Redesign
+\begin{flushleft}
+Principle of graphic design: Maximize the Data-to-Ink Ratio.
+\end{flushleft}
+
+\centering
+![](theory_figs/image11.png){width=60%}
+
+# Data Ink and Graphical Redesign
+\begin{flushleft}
+Principle of graphic design: Maximize the Data-to-Ink Ratio.
+\end{flushleft}
+
+\centering
+![](theory_figs/image13.png){width=60%}
+
+# Data Ink and Graphical Redesign
+\begin{flushleft}
+Another principle: Erase Non-Data Ink.
+\end{flushleft}
+
+\centering
+![](theory_figs/image4.png){width=60%}
+
+# Data Ink and Graphical Redesign
+\begin{flushleft}
+Another principle: Erase Non-Data Ink.
+\end{flushleft}
+
+\centering
+![](theory_figs/image7.png){width=80%}
+
+
+# Data Ink and Graphical Redesign
+\begin{flushleft}
+Bilateral symmetry can  redundancy.
+\end{flushleft}
+
+\centering
+![](theory_figs/twofaces.png){width=80%}
+
+(However, in some cases maintaining symmetry avoids confusion.)
+
+# Data Ink and Graphical Redesign
+\begin{flushleft}
+Another principle: Erase Redundant Data-Ink. \\
+Exception: redundancy to show patterns and cycles
+\end{flushleft}
+
+\centering
+![](theory_figs/image5.png){width=80%}
+
+
+# Data Ink and Graphical Redesign
+Edit and redesign to minimize redundant, non-data info.
+\begin{columns}[c]
+    \begin{column}{.5\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.6\textwidth]{theory_figs/image16.png}
+    \end{figure}      
+    \end{column}
+    \pause
+    \begin{column}{.5\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth]{theory_figs/image8.png}
+    \end{figure}      
+    \end{column}
+\end{columns}
+
+
+# Data Ink and Graphical Redesign
+\centering
+![](theory_figs/image6.png){width=80%}
+
+# Data Ink and Graphical Redesign
+\centering
+![](theory_figs/image26.png){width=80%}
+
+# Data Ink and Graphical Redesign
+\centering
+![](theory_figs/image19.png){width=80%}
+
+# Conclusion
+
+Principles to remember: 
+
+- Show data-related information
+
+- Maximize data-ink ratio
+
+- Erase non-relevant data
+
+- Erase redundancies
+
+- Practice the idea of editing and revisiting. 
+
+# Data Ink Maximization and Graphical Design
+\begin{flushleft}
+Consider applying these principles to NEW designs.
+\end{flushleft}
+
+\centering
+![](theory_figs/image24.png){width=70%}
+
+# Data Ink Maximization and Graphical Design
+\centering
+![](theory_figs/image41.png){width=70%}
+
+# Data Ink Maximization and Graphical Design
+\centering
+![](theory_figs/image33.png){width=70%}
+
+# Data Ink Maximization and Graphical Design
+\centering
+![](theory_figs/image28.png){width=70%}
+
+# Data Ink Maximization and Graphical Design
+\centering
+![](theory_figs/image40.png){width=50%}
+
+# Data Ink Maximization and Graphical Design
+\centering
+![](theory_figs/image35.png){width=50%}
+
+# Data Ink Maximization and Graphical Design
+\centering
+![](theory_figs/image31.png){width=70%}
+
+# Data Ink Maximization and Graphical Design
+\centering
+![](theory_figs/image38.png){width=70%}
+
+
+# Data Ink Maximization and Graphical Design
+\centering
+![](theory_figs/image49.png){width=70%}
+
+# Conclusions
+- Graphical design eliminates unnecessary information. 
+
+- It adds new ideas to maximize efficiency (leading to new designs). 
+
+- Data-Ink ratio should be close to 1.
+
+- Efficiency should be gained in communication and production.
+
+- Consider that some designs may be hard to understand. 
+
+- Use your criteria to decide how to present a graph according to the audience. 
+
+# Aesthetics and Technique in Data Graphical Design
+Graphical design should look for elegance and simplicity.
+
+This is particularly important when the data are complex.  
+
+Guidelines:
+
+- Combine words, numbers and graph together.
+
+- Provide a story behind the data. 
+
+- The design should avoid irrelevant information and be done professionally. 
+
+# Aesthetics and Technique in Data Graphical Design
+
+Combine graphical elements when appropriate.
+\pause
+
+\begin{columns}[c]
+    \begin{column}{.5\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth]{theory_figs/image32.png}
+        \includegraphics[width=0.2\textwidth]{theory_figs/image1.png}
+    \end{figure}      
+    \end{column}
+    \pause
+    \begin{column}{.5\textwidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=0.8\textwidth]{theory_figs/image34.png}        \includegraphics[width=0.2\textwidth]{theory_figs/image36.png}
+    \end{figure}      
+    \end{column}
+\end{columns}
+\pause
+
+Tables are:
+
+- ideal for small datasets. 
+
+- preferable to pie charts.
+
+# Aesthetics and Technique in Data Graphical Design
+\centering
+![](theory_figs/image44.png){width=70%}
+
+# Aesthetics and Technique in Data Graphical Design
+\centering
+![](theory_figs/image53.png){width=60%}
+
+# Aesthetics and Technique in Data Graphical Design
+Friendly Graphs: 
+
+- Words are clear and informative (avoid abbreviations).
+
+- Words should be read left to right (not vertically).
+
+- Avoid legends or elaborated colors. Put clear labels.  
+
+- Graph is attractive. 
+
+- Use a few colors (clearly distinguishable). 
+
+- Type clearly and precisely (avoid all capitals). 
+
+
+# Aesthetics and Technique in Data Graphical Design
+There should be a sense of balance and proportion.
+\pause
+
+\centering
+![](theory_figs/fig_5.png){width=70%}
+
+# Aesthetics and Technique in Data Graphical Design
+
+\centering
+![](theory_figs/image42.png){width=90%}
+
+
+# Aesthetics and Technique in Data Graphical Design
+\begin{flushleft}
+Graphs should tend toward the horizontal direction (wider not longer), because humans process information in the horizontal direction.
+\end{flushleft}
+
+\centering
+![](theory_figs/image43.png){width=70%}
+
+# Aesthetics and Technique in Data Graphical Design
+\begin{flushleft}
+An ideal example is the Golden Rectangle:
+\end{flushleft}
+
+\centering
+![](theory_figs/fig_7.png){width=70%}
+
+# Aesthetics and Technique in Data Graphical Design
+\begin{flushleft}
+Labeling should also tend toward the horizontal line:
+\end{flushleft}
+
+\centering
+![](theory_figs/fig_4.png){width=70%}
+
+# Epilogue
+"What is to be sought in designs for the display of quantitative information is the clear portrayal of complexity.  Not the complication of the simple; rather the task of the designer is to give visual access to the subtle and the difficult -- that is,
+\begin{center}
+  the revelation of the complex.
+\end{center}
+
+
