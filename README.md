@@ -18,7 +18,7 @@ Intellectual Foundations course offered by the STEM Center @UATX
 ### Constructing quantitative arguments
 
 - Slides: [Introduction to Python](topics/QuantArguments/python.pdf)
-- Code: [intro-py_python.ipynb](notebooks/intro-py.ipynb), [intro_text_python.ipynb](notebooks/intro_text_python.ipynb), [dataviz.ipynb](notebooks/dataviz.ipynb), [icecream.ipynb](notebooks/icecream.ipynb)
+- Code: [intro_py_python.ipynb](notebooks/intro-py.ipynb), [intro_text_python.ipynb](notebooks/intro_text_python.ipynb), [dataviz.ipynb](notebooks/dataviz.ipynb), [icecream.ipynb](notebooks/icecream.ipynb)
 
 
 ### Quantities, rates, growth, decay
