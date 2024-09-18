@@ -20,7 +20,7 @@ Intellectual Foundations course offered by the STEM Center @UATX
 
 - Slides: [Introduction to Python](topics/QuantArguments/python.pdf)
 - Code: [intro_py_python.ipynb](notebooks/intro-py.ipynb), [intro_text_python.ipynb](notebooks/intro_text_python.ipynb), [dataviz.ipynb](notebooks/dataviz.ipynb), [icecream.ipynb](notebooks/icecream.ipynb)
-- Interactive notebook: Is college worth it?
+- Interactive notebook: [Is college worth it?](https://colab.research.google.com/github/dpuelz/Quantitative-Reasoning-I/blob/main/notebooks/college_costbenefit.ipynb#scrollTo=7812d318-b68c-4949-bc32-106d38a992a3)
 
 
 ### Quantities, rates, growth, decay
