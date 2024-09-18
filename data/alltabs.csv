@@ -1,0 +1,32 @@
+Table 1,,,,,Table 2,,,,,Table 3,,,
+Attribute 1,Attribute 2,Attribute 3,Attribute 4,,Attribute 1,Attribute 2,Attribute 3,Attribute 4,,Attribute 1,Attribute 2,Attribute 3,Attribute 4
+5.18,125.8,green,circle,,5.18,125.8,blue,circle,,5.18,124.5,green,circle
+4.18,125.6,green,triangle,,4.18,125.6,orange,diamond,,4.18,147.5,green,triangle
+5.09,133.7,red,triangle,,5.09,133.7,blue,circle,,5.09,125.6,red,triangle
+6.56,184.6,orange,diamond,,6.56,184.6,red,square,,6.56,120.2,orange,diamond
+9.67,147.5,blue,square,,9.67,147.5,red,square,,9.67,110.8,blue,square
+4.21,110.8,green,triangle,,4.21,110.8,orange,diamond,,4.21,142.8,green,triangle
+9.93,158.2,green,diamond,,9.93,158.2,red,square,,9.93,100.5,green,diamond
+3.53,116.1,red,triangle,,3.53,116.1,orange,diamond,,3.53,158.3,red,triangle
+1.82,152.3,blue,diamond,,1.82,152.3,green,triangle,,1.82,184.5,blue,diamond
+6.66,176.8,red,triangle,,6.66,176.8,red,square,,6.66,116.2,red,triangle
+9.79,124.5,red,circle,,9.79,124.5,blue,circle,,9.79,109.5,red,circle
+0.39,116.1,red,circle,,0.39,116.1,orange,diamond,,0.39,199.1,red,circle
+5.86,190.9,blue,diamond,,5.86,190.9,red,square,,5.86,123.3,blue,diamond
+4,116.2,blue,circle,,4,116.2,orange,diamond,,4,152.3,blue,circle
+3.76,138.7,green,square,,3.76,138.7,orange,diamond,,3.76,158.2,green,square
+9.88,105.8,green,diamond,,9.88,105.8,blue,circle,,9.88,105.8,green,diamond
+2.54,120.2,green,circle,,2.54,120.2,orange,diamond,,2.54,161.2,green,circle
+6.93,161.2,red,square,,6.93,161.2,red,square,,6.93,116.1,red,square
+4.84,109.5,green,circle,,4.84,109.5,blue,circle,,4.84,133.7,green,circle
+4.74,184.5,green,triangle,,4.74,184.5,red,square,,4.74,138.7,green,triangle
+1.97,184,orange,diamond,,1.97,184,green,triangle,,1.97,184,orange,diamond
+1.51,123.3,orange,triangle,,1.51,123.3,orange,diamond,,1.51,190.9,orange,triangle
+1.97,163.1,red,triangle,,1.97,163.1,green,triangle,,1.97,176.8,red,triangle
+2.59,158.3,blue,triangle,,2.59,158.3,green,triangle,,2.59,160.4,blue,triangle
+4.55,100.5,orange,square,,4.55,100.5,orange,diamond,,4.55,139,orange,square
+4.91,142.8,green,triangle,,4.91,142.8,red,square,,4.91,125.8,green,triangle
+6.97,139,green,square,,6.97,139,red,square,,6.97,116.1,green,square
+7.81,113.9,red,square,,7.81,113.9,blue,circle,,7.81,113.9,red,square
+1.68,199.1,orange,triangle,,1.68,199.1,green,triangle,,1.68,184.6,orange,triangle
+2.07,160.4,red,triangle,,2.07,160.4,green,triangle,,2.07,163.1,red,triangle

@@ -8,6 +8,7 @@ Intellectual Foundations course offered by the STEM Center @UATX
 ### Introduction to the course
 
 - Slides: [Intro slides](topics/Introduction/intro.pdf)
+- Data: [alltabs.csv][data/alltabs.csv]
 
 ### Visual display of quantitative information
 
