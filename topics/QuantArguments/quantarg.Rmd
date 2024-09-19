@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Python"
+title: "Constructing Quantitative Arguments"
 author: "\\((\\text{Professor Dave})^2\\)"
 institute: "The University of Austin"
 output:
@@ -27,10 +27,13 @@ header-includes:
   - \usepackage{enumitem}
   - \setlist[itemize]{itemsep=9pt, label={--}}
   - \usepackage{anyfontsize}
+  - \usepackage{ulem}
   - \usepackage{tcolorbox}[most]
   - \usepackage{tikz}
   - \usepackage[T1]{fontenc}
   - \usepackage{booktabs}
+  - \usepackage{soul}
+  - \setul{4.5pt}{3pt} % First value is thickness, second is distance from text
   - \usepackage{colortbl}
   - \usepackage{multirow}
   - \usepackage{array}
@@ -68,82 +71,87 @@ header-includes:
   - \setbeamertemplate{footline}{\scriptsize{\hfill\insertframenumber\vspace{-.2cm}\hspace*{.35cm}}} 
 ---
 
-## Introduction to Python
+## 
 
-- **What is Python?**
-  - Python is a versatile, high-level programming language.
-  - Used in web development, data analysis, machine learning, automation, and more.
-  
-  \sk
-- **Why Python?**
-  - Easy to learn and read.
-  - Extensive community and resources.
-  - Powerful libraries for various fields: science, art, business, and more.
+\sk
+\Large \dg{You are confronted with a difficult question with many moving parts and possible outcomes.}
 
-## Value-prop for STEM
+\sk\sk
+How do you effectively answer this question, acknowledging the complexity, uncertainty, and trade offs involved?
 
-- **Data Science & Machine Learning**:
-  - Libraries: NumPy, Pandas, TensorFlow, SciPy.
-  - Used for data manipulation, statistical analysis, and building models.
-  
-  \sk
-- **Engineering & Simulations**:
-  - Used in simulations, optimization, and algorithmic computations.
+##
 
-## Value-prop for Humanities?
+\sk
+\Large
+Are medical schools discriminatory in admissions?
 
-Yes!
+##
 
-- **Text Analysis & Digital Humanities**:
-  - Libraries: NLTK, spaCy for natural language processing.
-  - Analyze large amounts of text for sentiment, themes, and word frequencies.
-  
-  \sk
-- **Creative Arts & Media**:
-  - Python is used in image processing, media production, and art installations.
-  - Libraries like PIL (Pillow) and Pygame.
+\sk
+\Large
+Are police racist?
 
-## Basic Python Syntax (Quick Overview)
 
-- **Variables & Types**:
+##
 
-  ```python
-  x = 10  # Integer
-  name = "Alice"  # String
-  is_student = True  # Boolean
-  ```
+\sk
+\Large
+Is private space travel the best way to become a multiplanetary species?
 
-- **Functions**:
+##
 
-  ```python
-  def greet():
-      print("Hello, world!")
-  ```
+\sk
+\Large
+Is the stock market predictable, and if so, to what degree?
 
-- **Loops & Conditionals**:
 
-  ```python
-  for i in range(5):
-      if i % 2 == 0:
-          print(i, "is even")
-  ```
+##
 
-## Installing Python
+\sk
+\Large
+Will increasing the minimum wage help or hurt the economy?
 
-- **Step 1: Download Python**:
-  - Go to [python.org](https://python.org).
-  - Click "Downloads" and select your operating system (Windows, macOS, Linux).
+##
 
-- **Step 2: Install Python**:
-  - Follow installation instructions on screen.
-  - Ensure you check the box to "Add Python to PATH."
-  - Also be sure to check the box to install `pip`, which is how you download other useful Python tools!
+\sk
+\Large
+Is this vaccine safe and effective?
 
-## Using Python via JupyterLab
+##
 
-- **Step 1: Install JupyterLab**:
-  - Install with `pip install jupyterlab` in your terminal.
-  
-- **Step 2: Using JupyterLab**:
-  - Start a notebook by typing `jupyter lab` in your terminal.
+\sk
+\Large
+Should I propose to a fellow UATX student?
+
+##
+
+\sk
+\Large
+Should I \st{propose to} ask out a fellow UATX student?
+
+## An analogy: Building a house
+
+![](figs/fig3.png)
+	
+\sk	
+There's only one way to manage something so complex:
+
+- \bo{Break down} the complex task into simpler tasks 
+- \bo{Sequence} the tasks so that each one builds on prior tasks and feeds into subsequent tasks
+
+
+## An analogy: Building a house
+
+A quantitative argument is built from sequencing simpler tasks
+
+- \bo{Framing} the question
+- Building a \bo{model}
+- Gathering \bo{data}
+- Making defensible \bo{assumptions}
+- \bo{Probing} the model's outputs
+
+##
+
+\sk
+\Large Is college worth it?
 
