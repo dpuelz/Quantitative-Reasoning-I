@@ -1,0 +1,115 @@
+---
+title: "Units, Dimension, and Scale"
+author: "Professors David Ruth and David Puelz"
+institute: "The University of Austin"
+output:
+  beamer_presentation:
+    theme: "metropolis"
+    colortheme: "seahorse"
+    latex_engine: "xelatex"
+    keep_tex: true
+header-includes:
+  - \usepackage{xcolor}
+  - \definecolor{myorange}{RGB}{255, 94, 77}
+  - \setbeamertemplate{footline}{}
+  - \usepackage{ragged2e}
+---
+
+# Units, Dimension, and Scale 
+Goals:
+
+-   Review notions of unit, dimension, and scale
+
+-   Explore arsenic case study
+
+-   Program in Python
+
+# Zaslow Appendix 5 (review/learn)
+
+-   5.1: Units
+
+-   5.2: Scientific notation
+
+-   5.3: Scientific notation under operations
+
+# Some practical instances (estimate value with appropriate unit) 
+
+-   US Gross Domestic Product
+
+-   Avagadro's number
+
+-   number of calculations a supercomputer performs in a day
+
+-   chance of winning this week's Powerball jackpot
+
+-   charge on an electron
+
+-   number of cells in a liver
+
+# Intensive vs. extensive properties
+
+The physical properties of a system can be classified into two categories:
+
+-   __Extensive properties__ depend on the mass of a system.
+
+-   __Intensive properties__ are independent of the mass of a system.
+
+Examples of each?
+
+\pause
+See https://sciencenotes.org/intensive-extensive-properties/ for more on this.
+
+# Zaslow Ch. 4 - Should I worry about arsenic (As) in rice?
+\pause
+Do you you have a prior opinion?
+
+\pause
+What are the possible responses?
+
+\pause
+What would it take for you to favor a particular respone?
+
+\pause
+What are the key subquestions to answer?
+
+\pause
+-   How much As do I ingest associated with rice consumption?
+
+\pause
+-   Is that quantity of As enough to worry about?
+
+# Example: ppm 
+Quantities of As in water are are measured in _parts per million_, or _ppm_.
+\pause
+
+\begin{center}
+ppm = (mass of solute)/(mass of solution)
+\end{center}
+
+\pause
+Note: "ppm" is technically unitless; i.e.,
+
+\begin{center}
+1 ppm = 1 mg/kg
+\end{center}
+
+\pause
+For water solution with neglible solute mass,
+
+\begin{center}
+ppm = 1 mg/L
+\end{center}
+
+# Zaslow Ch. 4 - Should I worry about arsenic (As) in rice?
+
+\centering
+\LARGE  SHIFT TO WHITEBOARD
+
+
+# Python programming
+Two programs today:
+
+- Simple program that triples and input and generates formatted output.
+
+- Documented program that performs conversion similar to assigned problem.
+
