@@ -1,0 +1,311 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\definecolor{burntorange}{rgb}{0.968, 0.549, 0.114}
+\definecolor{burntorangedark}{rgb}{0.486, 0.306, 0.102}
+\definecolor{lightblue}{rgb}{0.161, 0.471, 1}
+\definecolor{lightbluedark}{rgb}{0.125, 0.271, 0.510}
+\definecolor{charcoal}{rgb}{0.21, 0.27, 0.31}
+\definecolor{darkgray}{rgb}{0.3, 0.3, 0.3}
+\definecolor{darkgrey}{rgb}{0.33, 0.33, 0.33}
+\definecolor{cadmiumgreen}{rgb}{0.0, 0.42, 0.24}
+\definecolor{brandeisblue}{rgb}{0.0, 0.44, 1.0}
+\setbeamercolor{structure}{fg=darkgray}
+\setbeamercolor{footline}{fg=darkgray}
+\usepackage{amssymb, bm}
+\usepackage{amsmath, amsfonts, amscd, epsfig, amssymb, amsthm, adjustbox}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=9pt, label={--}}
+\usepackage{anyfontsize}
+\usepackage{ulem}
+\usepackage{tcolorbox}[most]
+\usepackage{tikz}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{soul}
+\setul{4.5pt}{3pt} % First value is thickness, second is distance from text
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{bbold}
+\usepackage{mathtools}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Q}[1]{>{\columncolor[gray]{0.8}\centering\arraybackslash}p{#1}}
+\newcommand\eho{\stackrel{\mathclap{\small\mbox{$H_0$}}}{=}}
+\newcommand\norm[1]{\left\lVert#1\right\rVert}
+\newcommand\smalldp{\fontsize{9.4}{7.2}\selectfont}
+\newcommand\smalldpp{\fontsize{8.5}{7.2}\selectfont}
+\newcommand\smalldppgh{\fontsize{9.5}{7.2}\selectfont}
+\newcolumntype{H}{>{\setbox0=\hbox\bgroup}c<{\egroup}@{}}
+\newcommand{\bo}[1]{\textcolor{burntorange}{#1}}
+\newcommand{\bod}[1]{\textcolor{burntorangedark}{#1}}
+\newcommand{\lb}[1]{\textcolor{lightblue}{#1}}
+\newcommand{\lbd}[1]{\textcolor{lightbluedark}{#1}}
+\newcommand{\dg}[1]{\textcolor{darkgray}{#1}}
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ib}{\end{itemize}}
+\newcommand{\p}{\item}
+\newcommand{\sk}{\vspace{.5cm}}
+\newcommand{\sko}{\vspace{.1in}}
+\newcommand{\skoo}{\vspace{.2in}}
+\newcommand{\skooo}{\vspace{.3in}}
+\newcommand{\skoooo}{\vspace{.05in}}
+\newcommand{\hko}{\hspace{.1in}}
+\newcommand{\hkoo}{\hspace{.2in}}
+\newcommand{\hkooo}{\hspace{.3in}}
+\newcommand{\bb}{$\lb{{\small \bullet } }$ \hspace{0.5mm}}
+\newcommand{\ba}{$\lb{{\small \rightarrow } }$ \hspace{0.5mm}}
+\setbeamertemplate{footline}{\scriptsize{\hfill\insertframenumber\vspace{-.2cm}\hspace*{.35cm}}}
+\usepackage{xcolor}
+\definecolor{myorange}{RGB}{255, 94, 77}
+\setbeamertemplate{footline}{}
+\usepackage{ragged2e}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Units, Dimension, and Scale},
+  pdfauthor={Professors David Ruth and David Puelz},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Units, Dimension, and Scale}
+\author{Professors David Ruth and David Puelz}
+\date{}
+\institute{The University of Austin}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Units, Dimension, and Scale}
+\phantomsection\label{units-dimension-and-scale}
+Goals:
+
+\begin{itemize}
+\item
+  Review notions of unit, dimension, and scale
+\item
+  Explore arsenic case study
+\item
+  Program in Python
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Zaslow Appendix 5 (review/learn)}
+\phantomsection\label{zaslow-appendix-5-reviewlearn}
+\begin{itemize}
+\item
+  5.1: Units
+\item
+  5.2: Scientific notation
+\item
+  5.3: Scientific notation under operations
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Some practical instances (estimate value with appropriate
+unit)}
+\phantomsection\label{some-practical-instances-estimate-value-with-appropriate-unit}
+\begin{itemize}
+\item
+  US Gross Domestic Product
+\item
+  Avagadro's number
+\item
+  number of calculations a supercomputer performs in a day
+\item
+  chance of winning this week's Powerball jackpot
+\item
+  charge on an electron
+\item
+  number of cells in a liver
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Intensive vs.~extensive properties}
+\phantomsection\label{intensive-vs.-extensive-properties}
+The physical properties of a system can be classified into two
+categories:
+
+\begin{itemize}
+\item
+  \textbf{Extensive properties} depend on the mass of a system.
+\item
+  \textbf{Intensive properties} are independent of the mass of a system.
+\end{itemize}
+
+Examples of each?
+
+\pause
+
+See \url{https://sciencenotes.org/intensive-extensive-properties/} for
+more on this.
+\end{frame}
+
+\begin{frame}{Zaslow Ch. 4 - Should I worry about arsenic (As) in rice?}
+\phantomsection\label{zaslow-ch.-4---should-i-worry-about-arsenic-as-in-rice}
+\pause
+
+Do you you have a prior opinion?
+
+\pause
+
+What are the possible responses?
+
+\pause
+
+What would it take for you to favor a particular respone?
+
+\pause
+
+What are the key subquestions to answer?
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  How much As do I ingest associated with rice consumption?
+\end{itemize}
+
+\pause
+
+\begin{itemize}
+\tightlist
+\item
+  Is that quantity of As enough to worry about?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Example: ppm}
+\phantomsection\label{example-ppm}
+Quantities of As in water are are measured in \emph{parts per million},
+or \emph{ppm}. \pause
+
+\begin{center}
+ppm = (mass of solute)/(mass of solution)
+\end{center}
+
+\pause
+
+Note: ``ppm'' is technically unitless; i.e.,
+
+\begin{center}
+1 ppm = 1 mg/kg
+\end{center}
+
+\pause
+
+For water solution with neglible solute mass,
+
+\begin{center}
+ppm = 1 mg/L
+\end{center}
+\end{frame}
+
+\begin{frame}{Zaslow Ch. 4 - Should I worry about arsenic (As) in rice?}
+\phantomsection\label{zaslow-ch.-4---should-i-worry-about-arsenic-as-in-rice-1}
+\centering
+
+\LARGE  SHIFT TO WHITEBOARD
+\end{frame}
+
+\begin{frame}{Python programming}
+\phantomsection\label{python-programming}
+Two programs today:
+
+\begin{itemize}
+\item
+  Simple program that triples and input and generates formatted output.
+\item
+  Documented program that performs conversion similar to assigned
+  problem.
+\end{itemize}
+\end{frame}
+
+\end{document}
