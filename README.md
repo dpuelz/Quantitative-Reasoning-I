@@ -26,6 +26,7 @@ Intellectual Foundations course offered by the STEM Center @UATX
 ### Quantities, rates, growth, decay
 
 - Slides: [Units + Dimensions](topics/RatesGrowthDecay/units_and_dims.pdf)
+- Slides: [Quantities + Rates](topics/RatesGrowthDecay/quantities_and_rates.pdf)
 
 ### Functions
 
