@@ -1,0 +1,95 @@
+---
+title: "Growth and Decay (Part 1)"
+author: "Professors David Ruth and David Puelz"
+institute: "The University of Austin"
+output:
+  beamer_presentation:
+    theme: "metropolis"
+    colortheme: "seahorse"
+    latex_engine: "xelatex"
+    keep_tex: true
+header-includes:
+  - \usepackage{xcolor}
+  - \definecolor{myorange}{RGB}{255, 94, 77}
+  - \setbeamertemplate{footline}{}
+  - \usepackage{ragged2e}
+---
+
+# Growth and Decay (Part 1) 
+Goals:
+
+-   Be familiar with applications of the exponential function.
+
+-   Convert other exponential bases to the natural base.
+
+-   Apply the exponential function to problem-solving in growth and decay settings.
+
+
+# AI says...
+Ask an online AI tool, "What is the most important function in mathematics?"  Odds are you'll get something like this:
+
+\pause
+
+\textit{If we were to pinpoint a single function that stands out due to its widespread application and importance, \textbf{many would argue for the exponential function},}
+\begin{center}
+$y = e^x$, 
+\end{center}
+
+\textit{where $e \approx 2.718$.}
+
+\pause
+Why?
+
+# AI continues...
+- This function is crucial in various fields, including calculus, complex analysis, and differential equations.
+
+- The exponential function is particularly significant because it models growth and decay processes, such as population growth, radioactive decay, and interest calculations in finance. 
+
+- Its inverse, the natural logarithm function ($\ln(x)$), is equally important for solving equations involving exponentials.
+
+
+# Applications too vast to number
+The exponential function has numerous important applications across various fields:
+
+- Biology: Population Growth, Spread of Diseases, Carbon Dating
+
+- Physics: Radioactive Decay, Newton's Law of Cooling
+
+- Finance: Compound Interest
+
+- Engineering: Current in Electrical Circuits, Integral Transforms
+
+- Computer Science : Algorithm Analysis, Data Structures
+
+- Chemistry:  Reaction Rates
+
+- Probability:  Time Between Events, Reliability, Queueing Theory, Normal Distribution and CLT
+
+- ...and more!
+
+# Bases you know
+\centering
+![](Zaslow_figs/Picture1.png)
+
+# The natural base
+\centering
+![](Zaslow_figs/Picture2.png)
+
+# Exponential growth is...EXPONENTIAL
+\centering
+![](Zaslow_figs/Picture3.png)
+
+
+# More about $e^x$...
+
+\normalsize
+- Review Appendix 6.
+- Read 6.4 for exponential function details.
+\pause
+
+\centering
+\LARGE  SHIFT TO WHITEBOARD
+
+\normalsize
+- Problem 1: Modeling growth
+- Problem 2: Modeling cooling 
