@@ -1,0 +1,14 @@
+\frametitle{{\tt Markdown}}
+	\begin{itemize}
+		\item A simple markup language for generating a wide variety of output formats (HTML, PDF, etc) from plain text documents
+		\item Two pillars: (\lb{i}) a formatting language, (\lb{ii}) a conversion tool
+		\item Much simpler than, for example, HTML
+	\end{itemize}
+$$$$
+{\tt Rmarkdown} allows you to write up data analyses easily within {\tt R} to make reproducible reports.  You can install the package directly in {\tt R} by running the following command:
+\vspace{10mm}
+
+\begin{lstlisting}[language=R]
+install.packages("rmarkdown")
+\end{lstlisting}
+

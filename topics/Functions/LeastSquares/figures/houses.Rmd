@@ -1,0 +1,19 @@
+---
+title: "houses"
+author: "David Puelz"
+date: "9/27/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+data = read.csv('housedata.csv')
+fit = lm(Price~Size,data)
+summary(fit)
+```
+
