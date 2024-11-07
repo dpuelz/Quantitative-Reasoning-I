@@ -34,7 +34,7 @@ Intellectual Foundations course offered by the STEM Center @UATX
 
 - Slides: [Functions + Data - BV tradeoff](topics/Functions/BVtradeoff.pdf)
 - Slides: [Functions + Data - Least squares](topics/Functions/prediction.pdf)
-- Code: [BV tradeoff](notebooks/inclass_BV.ipynb)
+- Code: [inclass_BV.ipynb](notebooks/inclass_BV.ipynb)
 
 ### Bringing it all together: A full build of a quantitative argument
 
