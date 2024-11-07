@@ -35,6 +35,7 @@ Intellectual Foundations course offered by the STEM Center @UATX
 - Slides: [Functions + Data - BV tradeoff](topics/Functions/BVtradeoff.pdf)
 - Slides: [Functions + Data - Least squares](topics/Functions/prediction.pdf)
 - Code: [inclass_BV.ipynb](notebooks/inclass_BV.ipynb)
+- Interactive notebook: [Visualizing least sqaures](https://colab.research.google.com/github/dpuelz/Quantitative-Reasoning-I/blob/main/notebooks/inclass_LS.ipynb#scrollTo=XxU8jwoU6teX)
 
 ### Bringing it all together: A full build of a quantitative argument
 
