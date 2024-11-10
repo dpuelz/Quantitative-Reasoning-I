@@ -1,8 +1,0 @@
-\beamer@endinputifotherversion {3.26pt}
-\beamer@sectionintoc {1}{1. Introduction}{1}{0}{1}
-\beamer@sectionintoc {2}{2. Measuring Accuracy}{25}{0}{2}
-\beamer@sectionintoc {3}{3. Out-of Sample Predictions}{27}{0}{3}
-\beamer@sectionintoc {4}{4. Bias-Variance Trade-Off}{30}{0}{4}
-\beamer@sectionintoc {5}{5. Classification}{39}{0}{5}
-\beamer@sectionintoc {6}{6. Cross-Validation}{44}{0}{6}
-\beamer@sectionintoc {7}{7. $k$-Nearest Neighbors (kNN)}{50}{0}{7}
